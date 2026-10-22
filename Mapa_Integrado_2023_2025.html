@@ -1,0 +1,3193 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_15e8259ee670bab5b59c4ce8a5ddf9fd {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+
+            <style>html, body {
+                width: 100%;
+                height: 100%;
+                margin: 0;
+                padding: 0;
+            }
+            </style>
+
+            <style>#map {
+                position:absolute;
+                top:0;
+                bottom:0;
+                right:0;
+                left:0;
+                }
+            </style>
+
+            <script>
+                L_NO_TOUCH = false;
+                L_DISABLE_3D = false;
+            </script>
+
+        
+</head>
+<body>
+    
+    
+<div style="
+    position: fixed;
+    bottom: 30px;
+    left: 30px;
+    z-index: 9999;
+    background: white;
+    padding: 12px;
+    border: 1px solid #999;
+    border-radius: 6px;
+    font-size: 13px;">
+
+    <b>Ausentismo registrado - 2023 y 2025</b>
+    <hr>
+
+    <span style="color:#2a9d8f">●</span> 0 a 2 %<br>
+    <span style="color:#a7c957">●</span> Más de 2 a 4 %<br>
+    <span style="color:#f4d35e">●</span> Más de 4 a 7 %<br>
+    <span style="color:#ee964b">●</span> Más de 7 a menos de 12 %<br>
+    <span style="color:#d62828">●</span> 12 % o más<br>
+
+    <small>Mínimo: 20 autoridades acumuladas</small>
+</div>
+    
+            <div class="folium-map" id="map_15e8259ee670bab5b59c4ce8a5ddf9fd" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_15e8259ee670bab5b59c4ce8a5ddf9fd = L.map(
+                "map_15e8259ee670bab5b59c4ce8a5ddf9fd",
+                {
+                    center: [-27.3, -54.7],
+                    crs: L.CRS.EPSG3857,
+                    ...{
+  "zoom": 8,
+  "zoomControl": true,
+  "preferCanvas": false,
+}
+
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_a362291ad5e19f86e3d20b448b680156 = L.tileLayer(
+                "https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}",
+                {
+  "minZoom": 0,
+  "maxZoom": 18,
+  "maxNativeZoom": 18,
+  "noWrap": false,
+  "attribution": "Tiles \u00a9 Esri y colaboradores",
+  "subdomains": "abc",
+  "detectRetina": false,
+  "tms": false,
+  "opacity": 1,
+}
+
+            );
+        
+    
+            tile_layer_a362291ad5e19f86e3d20b448b680156.addTo(map_15e8259ee670bab5b59c4ce8a5ddf9fd);
+        
+    
+            var circle_marker_915a2e6951e35919db1086cafa9c3819 = L.circleMarker(
+                [-27.3925234, -54.6142637],
+                {"bubblingMouseEvents": true, "color": "#2a9d8f", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#2a9d8f", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 1}
+            ).addTo(map_15e8259ee670bab5b59c4ce8a5ddf9fd);
+        
+    
+        var popup_1050ab7fdf7b5916a14219a68cf32c07 = L.popup({
+  "maxWidth": 280,
+});
+
+        
+            
+                var html_fd15beb728f113c65071f955081efe71 = $(`<div id="html_fd15beb728f113c65071f955081efe71" style="width: 100.0%; height: 100.0%;"><b>25 de Mayo</b><p>Elecciones: 2023 y 2025</p><p>Ausencias acumuladas: 2</p><p>Autoridades consideradas: 170</p><p>Ausentismo registrado: 1.18%</p></div>`)[0];
+                popup_1050ab7fdf7b5916a14219a68cf32c07.setContent(html_fd15beb728f113c65071f955081efe71);
+            
+        
+
+        circle_marker_915a2e6951e35919db1086cafa9c3819.bindPopup(popup_1050ab7fdf7b5916a14219a68cf32c07)
+        ;
+
+        
+    
+    
+            circle_marker_915a2e6951e35919db1086cafa9c3819.bindTooltip(
+                `<div>
+                     25 de Mayo: 1.18%
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_667046d6b023b42c754bd3ae96db3557 = L.circleMarker(
+                [-26.4300506, -54.4660386],
+                {"bubblingMouseEvents": true, "color": "#2a9d8f", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#2a9d8f", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 1}
+            ).addTo(map_15e8259ee670bab5b59c4ce8a5ddf9fd);
+        
+    
+        var popup_1130a5cda54645e200d8ad3e44b03535 = L.popup({
+  "maxWidth": 280,
+});
+
+        
+            
+                var html_c7d2fffe97c7d4d5444564e8b33619eb = $(`<div id="html_c7d2fffe97c7d4d5444564e8b33619eb" style="width: 100.0%; height: 100.0%;"><b>9 de Julio</b><p>Elecciones: 2023 y 2025</p><p>Ausencias acumuladas: 1</p><p>Autoridades consideradas: 98</p><p>Ausentismo registrado: 1.02%</p></div>`)[0];
+                popup_1130a5cda54645e200d8ad3e44b03535.setContent(html_c7d2fffe97c7d4d5444564e8b33619eb);
+            
+        
+
+        circle_marker_667046d6b023b42c754bd3ae96db3557.bindPopup(popup_1130a5cda54645e200d8ad3e44b03535)
+        ;
+
+        
+    
+    
+            circle_marker_667046d6b023b42c754bd3ae96db3557.bindTooltip(
+                `<div>
+                     9 de Julio: 1.02%
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_f6cc01213f0d93435ac6eff8205aa305 = L.circleMarker(
+                [-27.5687758, -54.6834759],
+                {"bubblingMouseEvents": true, "color": "#2a9d8f", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#2a9d8f", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 1}
+            ).addTo(map_15e8259ee670bab5b59c4ce8a5ddf9fd);
+        
+    
+        var popup_bceb9a5be113e745d97f7f8603ab9531 = L.popup({
+  "maxWidth": 280,
+});
+
+        
+            
+                var html_3bd5fd6362c4ecaa2460ae33f5dd15fa = $(`<div id="html_3bd5fd6362c4ecaa2460ae33f5dd15fa" style="width: 100.0%; height: 100.0%;"><b>Alba Posse</b><p>Elecciones: 2023 y 2025</p><p>Ausencias acumuladas: 1</p><p>Autoridades consideradas: 161</p><p>Ausentismo registrado: 0.62%</p></div>`)[0];
+                popup_bceb9a5be113e745d97f7f8603ab9531.setContent(html_3bd5fd6362c4ecaa2460ae33f5dd15fa);
+            
+        
+
+        circle_marker_f6cc01213f0d93435ac6eff8205aa305.bindPopup(popup_bceb9a5be113e745d97f7f8603ab9531)
+        ;
+
+        
+    
+    
+            circle_marker_f6cc01213f0d93435ac6eff8205aa305.bindTooltip(
+                `<div>
+                     Alba Posse: 0.62%
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_2d1434b0fa52b0f8d5f1cfcc457d9528 = L.circleMarker(
+                [-27.5080989, -55.4034658],
+                {"bubblingMouseEvents": true, "color": "#2a9d8f", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#2a9d8f", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 1}
+            ).addTo(map_15e8259ee670bab5b59c4ce8a5ddf9fd);
+        
+    
+        var popup_0ad7750309963c85a2eff34e34c0cfbc = L.popup({
+  "maxWidth": 280,
+});
+
+        
+            
+                var html_634a180f0ce36e99f29b655415fcb2d2 = $(`<div id="html_634a180f0ce36e99f29b655415fcb2d2" style="width: 100.0%; height: 100.0%;"><b>Almafuerte</b><p>Elecciones: 2023 y 2025</p><p>Ausencias acumuladas: 0</p><p>Autoridades consideradas: 30</p><p>Ausentismo registrado: 0.00%</p></div>`)[0];
+                popup_0ad7750309963c85a2eff34e34c0cfbc.setContent(html_634a180f0ce36e99f29b655415fcb2d2);
+            
+        
+
+        circle_marker_2d1434b0fa52b0f8d5f1cfcc457d9528.bindPopup(popup_0ad7750309963c85a2eff34e34c0cfbc)
+        ;
+
+        
+    
+    
+            circle_marker_2d1434b0fa52b0f8d5f1cfcc457d9528.bindTooltip(
+                `<div>
+                     Almafuerte: 0.00%
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_184c55ec491c311cde70477e52e95dc5 = L.circleMarker(
+                [-27.9139657, -55.7549174],
+                {"bubblingMouseEvents": true, "color": "#a7c957", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#a7c957", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 1}
+            ).addTo(map_15e8259ee670bab5b59c4ce8a5ddf9fd);
+        
+    
+        var popup_e85d17d014d3316c1ac7fecc0d13f9a9 = L.popup({
+  "maxWidth": 280,
+});
+
+        
+            
+                var html_44331ea06391e902b46bfc66d954d1fa = $(`<div id="html_44331ea06391e902b46bfc66d954d1fa" style="width: 100.0%; height: 100.0%;"><b>Apóstoles</b><p>Elecciones: 2023 y 2025</p><p>Ausencias acumuladas: 11</p><p>Autoridades consideradas: 416</p><p>Ausentismo registrado: 2.64%</p></div>`)[0];
+                popup_e85d17d014d3316c1ac7fecc0d13f9a9.setContent(html_44331ea06391e902b46bfc66d954d1fa);
+            
+        
+
+        circle_marker_184c55ec491c311cde70477e52e95dc5.bindPopup(popup_e85d17d014d3316c1ac7fecc0d13f9a9)
+        ;
+
+        
+    
+    
+            circle_marker_184c55ec491c311cde70477e52e95dc5.bindTooltip(
+                `<div>
+                     Apóstoles: 2.64%
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_d7403310721227667ba0ae21511bd12a = L.circleMarker(
+                [-27.3424441, -54.7622149],
+                {"bubblingMouseEvents": true, "color": "#2a9d8f", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#2a9d8f", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 1}
+            ).addTo(map_15e8259ee670bab5b59c4ce8a5ddf9fd);
+        
+    
+        var popup_6651b4a94ac1d0cfd9025d9bfd2d137f = L.popup({
+  "maxWidth": 280,
+});
+
+        
+            
+                var html_3a8a779b11c62ea3f9a26452b73edbcf = $(`<div id="html_3a8a779b11c62ea3f9a26452b73edbcf" style="width: 100.0%; height: 100.0%;"><b>Aristóbulo Colonia</b><p>Elecciones: 2023 y 2025</p><p>Ausencias acumuladas: 0</p><p>Autoridades consideradas: 45</p><p>Ausentismo registrado: 0.00%</p></div>`)[0];
+                popup_6651b4a94ac1d0cfd9025d9bfd2d137f.setContent(html_3a8a779b11c62ea3f9a26452b73edbcf);
+            
+        
+
+        circle_marker_d7403310721227667ba0ae21511bd12a.bindPopup(popup_6651b4a94ac1d0cfd9025d9bfd2d137f)
+        ;
+
+        
+    
+    
+            circle_marker_d7403310721227667ba0ae21511bd12a.bindTooltip(
+                `<div>
+                     Aristóbulo Colonia: 0.00%
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_69ab792b7f775667a09ff4cf2517d258 = L.circleMarker(
+                [-27.099185, -54.8935248],
+                {"bubblingMouseEvents": true, "color": "#2a9d8f", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#2a9d8f", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 1}
+            ).addTo(map_15e8259ee670bab5b59c4ce8a5ddf9fd);
+        
+    
+        var popup_c03d450c47db59113e6c3f31c6165012 = L.popup({
+  "maxWidth": 280,
+});
+
+        
+            
+                var html_c6576e2ea694b20d571883d4e1a8067d = $(`<div id="html_c6576e2ea694b20d571883d4e1a8067d" style="width: 100.0%; height: 100.0%;"><b>Aristóbulo del Valle</b><p>Elecciones: 2023 y 2025</p><p>Ausencias acumuladas: 0</p><p>Autoridades consideradas: 241</p><p>Ausentismo registrado: 0.00%</p></div>`)[0];
+                popup_c03d450c47db59113e6c3f31c6165012.setContent(html_c6576e2ea694b20d571883d4e1a8067d);
+            
+        
+
+        circle_marker_69ab792b7f775667a09ff4cf2517d258.bindPopup(popup_c03d450c47db59113e6c3f31c6165012)
+        ;
+
+        
+    
+    
+            circle_marker_69ab792b7f775667a09ff4cf2517d258.bindTooltip(
+                `<div>
+                     Aristóbulo del Valle: 0.00%
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_f46aef59045e9b2ee5f6bdd92a8445e7 = L.circleMarker(
+                [-27.6982582, -55.4048372],
+                {"bubblingMouseEvents": true, "color": "#2a9d8f", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#2a9d8f", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 1}
+            ).addTo(map_15e8259ee670bab5b59c4ce8a5ddf9fd);
+        
+    
+        var popup_e241d67d92a89574f76765a53a4ec8c2 = L.popup({
+  "maxWidth": 280,
+});
+
+        
+            
+                var html_cb215192a79257a432c0e294f392240c = $(`<div id="html_cb215192a79257a432c0e294f392240c" style="width: 100.0%; height: 100.0%;"><b>Arroyo del Medio</b><p>Elecciones: 2023 y 2025</p><p>Ausencias acumuladas: 0</p><p>Autoridades consideradas: 30</p><p>Ausentismo registrado: 0.00%</p></div>`)[0];
+                popup_e241d67d92a89574f76765a53a4ec8c2.setContent(html_cb215192a79257a432c0e294f392240c);
+            
+        
+
+        circle_marker_f46aef59045e9b2ee5f6bdd92a8445e7.bindPopup(popup_e241d67d92a89574f76765a53a4ec8c2)
+        ;
+
+        
+    
+    
+            circle_marker_f46aef59045e9b2ee5f6bdd92a8445e7.bindTooltip(
+                `<div>
+                     Arroyo del Medio: 0.00%
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_ea120f08aaa77ac8c121c39605979340 = L.circleMarker(
+                [-28.0607112, -55.6770963],
+                {"bubblingMouseEvents": true, "color": "#2a9d8f", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#2a9d8f", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 1}
+            ).addTo(map_15e8259ee670bab5b59c4ce8a5ddf9fd);
+        
+    
+        var popup_181e4ce38d573f4f35b5eeac1491f93e = L.popup({
+  "maxWidth": 280,
+});
+
+        
+            
+                var html_0caa737f9a4c31526437842f6a9c6e9a = $(`<div id="html_0caa737f9a4c31526437842f6a9c6e9a" style="width: 100.0%; height: 100.0%;"><b>Azara</b><p>Elecciones: 2023 y 2025</p><p>Ausencias acumuladas: 0</p><p>Autoridades consideradas: 66</p><p>Ausentismo registrado: 0.00%</p></div>`)[0];
+                popup_181e4ce38d573f4f35b5eeac1491f93e.setContent(html_0caa737f9a4c31526437842f6a9c6e9a);
+            
+        
+
+        circle_marker_ea120f08aaa77ac8c121c39605979340.bindPopup(popup_181e4ce38d573f4f35b5eeac1491f93e)
+        ;
+
+        
+    
+    
+            circle_marker_ea120f08aaa77ac8c121c39605979340.bindTooltip(
+                `<div>
+                     Azara: 0.00%
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_fd6fde734deb03e96680767814fb5a7b = L.circleMarker(
+                [-27.9110797, -55.8104955],
+                {"bubblingMouseEvents": true, "color": "#ee964b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#ee964b", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 1}
+            ).addTo(map_15e8259ee670bab5b59c4ce8a5ddf9fd);
+        
+    
+        var popup_e76ce462b8d9784bdd1b6b2454d54caa = L.popup({
+  "maxWidth": 280,
+});
+
+        
+            
+                var html_5ce86a011c763e81d3065882caba5b36 = $(`<div id="html_5ce86a011c763e81d3065882caba5b36" style="width: 100.0%; height: 100.0%;"><b>Barrio Estación</b><p>Elecciones: 2023 y 2025</p><p>Ausencias acumuladas: 3</p><p>Autoridades consideradas: 36</p><p>Ausentismo registrado: 8.33%</p></div>`)[0];
+                popup_e76ce462b8d9784bdd1b6b2454d54caa.setContent(html_5ce86a011c763e81d3065882caba5b36);
+            
+        
+
+        circle_marker_fd6fde734deb03e96680767814fb5a7b.bindPopup(popup_e76ce462b8d9784bdd1b6b2454d54caa)
+        ;
+
+        
+    
+    
+            circle_marker_fd6fde734deb03e96680767814fb5a7b.bindTooltip(
+                `<div>
+                     Barrio Estación: 8.33%
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_3ee9aacfaed46b03524b1f27fb2b2b74 = L.circleMarker(
+                [-26.2553959, -53.6467366],
+                {"bubblingMouseEvents": true, "color": "#2a9d8f", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#2a9d8f", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 1}
+            ).addTo(map_15e8259ee670bab5b59c4ce8a5ddf9fd);
+        
+    
+        var popup_1bb37f7e5037cbf04d64f020f2445a4a = L.popup({
+  "maxWidth": 280,
+});
+
+        
+            
+                var html_e67b6c7368370a7d8921db1bbc48ebaa = $(`<div id="html_e67b6c7368370a7d8921db1bbc48ebaa" style="width: 100.0%; height: 100.0%;"><b>Bernardo de Irigoyen</b><p>Elecciones: 2023 y 2025</p><p>Ausencias acumuladas: 0</p><p>Autoridades consideradas: 273</p><p>Ausentismo registrado: 0.00%</p></div>`)[0];
+                popup_1bb37f7e5037cbf04d64f020f2445a4a.setContent(html_e67b6c7368370a7d8921db1bbc48ebaa);
+            
+        
+
+        circle_marker_3ee9aacfaed46b03524b1f27fb2b2b74.bindPopup(popup_1bb37f7e5037cbf04d64f020f2445a4a)
+        ;
+
+        
+    
+    
+            circle_marker_3ee9aacfaed46b03524b1f27fb2b2b74.bindTooltip(
+                `<div>
+                     Bernardo de Irigoyen: 0.00%
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_55ac533ef3401477e65cfb531ff14f86 = L.circleMarker(
+                [-27.4854462, -55.4800919],
+                {"bubblingMouseEvents": true, "color": "#2a9d8f", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#2a9d8f", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 1}
+            ).addTo(map_15e8259ee670bab5b59c4ce8a5ddf9fd);
+        
+    
+        var popup_1a73871d77d4c1e895da5ab68e5432af = L.popup({
+  "maxWidth": 280,
+});
+
+        
+            
+                var html_471dc946cd392cf69ee899d458e1d331 = $(`<div id="html_471dc946cd392cf69ee899d458e1d331" style="width: 100.0%; height: 100.0%;"><b>Bonpland</b><p>Elecciones: 2023 y 2025</p><p>Ausencias acumuladas: 0</p><p>Autoridades consideradas: 45</p><p>Ausentismo registrado: 0.00%</p></div>`)[0];
+                popup_1a73871d77d4c1e895da5ab68e5432af.setContent(html_471dc946cd392cf69ee899d458e1d331);
+            
+        
+
+        circle_marker_55ac533ef3401477e65cfb531ff14f86.bindPopup(popup_1a73871d77d4c1e895da5ab68e5432af)
+        ;
+
+        
+    
+    
+            circle_marker_55ac533ef3401477e65cfb531ff14f86.bindTooltip(
+                `<div>
+                     Bonpland: 0.00%
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_30c686922df6247f9d49f5ed10794007 = L.circleMarker(
+                [-27.2079446, -54.9796933],
+                {"bubblingMouseEvents": true, "color": "#2a9d8f", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#2a9d8f", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 1}
+            ).addTo(map_15e8259ee670bab5b59c4ce8a5ddf9fd);
+        
+    
+        var popup_87f3f91db35d526b6df0cccb1af629f8 = L.popup({
+  "maxWidth": 280,
+});
+
+        
+            
+                var html_fc2bb5f51be0cb9788bc1856c8d3bcb6 = $(`<div id="html_fc2bb5f51be0cb9788bc1856c8d3bcb6" style="width: 100.0%; height: 100.0%;"><b>Campo Grande</b><p>Elecciones: 2023 y 2025</p><p>Ausencias acumuladas: 4</p><p>Autoridades consideradas: 201</p><p>Ausentismo registrado: 1.99%</p></div>`)[0];
+                popup_87f3f91db35d526b6df0cccb1af629f8.setContent(html_fc2bb5f51be0cb9788bc1856c8d3bcb6);
+            
+        
+
+        circle_marker_30c686922df6247f9d49f5ed10794007.bindPopup(popup_87f3f91db35d526b6df0cccb1af629f8)
+        ;
+
+        
+    
+    
+            circle_marker_30c686922df6247f9d49f5ed10794007.bindTooltip(
+                `<div>
+                     Campo Grande: 1.99%
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_5623814ddcfafcec1fe4976dfa8a1783 = L.circleMarker(
+                [-27.4559424, -55.0221234],
+                {"bubblingMouseEvents": true, "color": "#2a9d8f", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#2a9d8f", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 1}
+            ).addTo(map_15e8259ee670bab5b59c4ce8a5ddf9fd);
+        
+    
+        var popup_68bb8ec7980f0464b11b3d25d9c33fea = L.popup({
+  "maxWidth": 280,
+});
+
+        
+            
+                var html_6d99ef99e1c0019296e099a9421d916b = $(`<div id="html_6d99ef99e1c0019296e099a9421d916b" style="width: 100.0%; height: 100.0%;"><b>Campo Ramón</b><p>Elecciones: 2023 y 2025</p><p>Ausencias acumuladas: 2</p><p>Autoridades consideradas: 144</p><p>Ausentismo registrado: 1.39%</p></div>`)[0];
+                popup_68bb8ec7980f0464b11b3d25d9c33fea.setContent(html_6d99ef99e1c0019296e099a9421d916b);
+            
+        
+
+        circle_marker_5623814ddcfafcec1fe4976dfa8a1783.bindPopup(popup_68bb8ec7980f0464b11b3d25d9c33fea)
+        ;
+
+        
+    
+    
+            circle_marker_5623814ddcfafcec1fe4976dfa8a1783.bindTooltip(
+                `<div>
+                     Campo Ramón: 1.39%
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_951d429b27e2a1814627c6553562d534 = L.circleMarker(
+                [-27.3309528, -55.0543134],
+                {"bubblingMouseEvents": true, "color": "#2a9d8f", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#2a9d8f", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 1}
+            ).addTo(map_15e8259ee670bab5b59c4ce8a5ddf9fd);
+        
+    
+        var popup_12b29f513e70ba9165a05ae6ad6889f3 = L.popup({
+  "maxWidth": 280,
+});
+
+        
+            
+                var html_9c402004b56107baf631b2038fa6fb1f = $(`<div id="html_9c402004b56107baf631b2038fa6fb1f" style="width: 100.0%; height: 100.0%;"><b>Campo Viera</b><p>Elecciones: 2023 y 2025</p><p>Ausencias acumuladas: 0</p><p>Autoridades consideradas: 167</p><p>Ausentismo registrado: 0.00%</p></div>`)[0];
+                popup_12b29f513e70ba9165a05ae6ad6889f3.setContent(html_9c402004b56107baf631b2038fa6fb1f);
+            
+        
+
+        circle_marker_951d429b27e2a1814627c6553562d534.bindPopup(popup_12b29f513e70ba9165a05ae6ad6889f3)
+        ;
+
+        
+    
+    
+            circle_marker_951d429b27e2a1814627c6553562d534.bindTooltip(
+                `<div>
+                     Campo Viera: 0.00%
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_6224d1eda1ae842213c96ce12bd7753c = L.circleMarker(
+                [-27.4612494, -55.7440717],
+                {"bubblingMouseEvents": true, "color": "#ee964b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#ee964b", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 1}
+            ).addTo(map_15e8259ee670bab5b59c4ce8a5ddf9fd);
+        
+    
+        var popup_782f2fb7212a1d856b25c9b15419623c = L.popup({
+  "maxWidth": 280,
+});
+
+        
+            
+                var html_46e3206dd4301154c09dc71e0024cc80 = $(`<div id="html_46e3206dd4301154c09dc71e0024cc80" style="width: 100.0%; height: 100.0%;"><b>Candelaria</b><p>Elecciones: 2023 y 2025</p><p>Ausencias acumuladas: 24</p><p>Autoridades consideradas: 278</p><p>Ausentismo registrado: 8.63%</p></div>`)[0];
+                popup_782f2fb7212a1d856b25c9b15419623c.setContent(html_46e3206dd4301154c09dc71e0024cc80);
+            
+        
+
+        circle_marker_6224d1eda1ae842213c96ce12bd7753c.bindPopup(popup_782f2fb7212a1d856b25c9b15419623c)
+        ;
+
+        
+    
+    
+            circle_marker_6224d1eda1ae842213c96ce12bd7753c.bindTooltip(
+                `<div>
+                     Candelaria: 8.63%
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_958708a9a0d7e21ca389a951e7dd1bc2 = L.circleMarker(
+                [-26.9282667, -55.0573222],
+                {"bubblingMouseEvents": true, "color": "#a7c957", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#a7c957", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 1}
+            ).addTo(map_15e8259ee670bab5b59c4ce8a5ddf9fd);
+        
+    
+        var popup_fed0700515294b914d0c9e47df5e1c57 = L.popup({
+  "maxWidth": 280,
+});
+
+        
+            
+                var html_d69e9ea1a9ccbf3206f96579eae92cf0 = $(`<div id="html_d69e9ea1a9ccbf3206f96579eae92cf0" style="width: 100.0%; height: 100.0%;"><b>Capioví</b><p>Elecciones: 2023 y 2025</p><p>Ausencias acumuladas: 4</p><p>Autoridades consideradas: 105</p><p>Ausentismo registrado: 3.81%</p></div>`)[0];
+                popup_fed0700515294b914d0c9e47df5e1c57.setContent(html_d69e9ea1a9ccbf3206f96579eae92cf0);
+            
+        
+
+        circle_marker_958708a9a0d7e21ca389a951e7dd1bc2.bindPopup(popup_fed0700515294b914d0c9e47df5e1c57)
+        ;
+
+        
+    
+    
+            circle_marker_958708a9a0d7e21ca389a951e7dd1bc2.bindTooltip(
+                `<div>
+                     Capioví: 3.81%
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_758b074ebf64fc50b792bda7ca1fae58 = L.circleMarker(
+                [-26.6561818, -54.7392049],
+                {"bubblingMouseEvents": true, "color": "#2a9d8f", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#2a9d8f", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 1}
+            ).addTo(map_15e8259ee670bab5b59c4ce8a5ddf9fd);
+        
+    
+        var popup_d0adff1f286a564219647a3f7270e32a = L.popup({
+  "maxWidth": 280,
+});
+
+        
+            
+                var html_0c87dd3045bbd6d95ba59204e08c6598 = $(`<div id="html_0c87dd3045bbd6d95ba59204e08c6598" style="width: 100.0%; height: 100.0%;"><b>Caraguatay</b><p>Elecciones: 2023 y 2025</p><p>Ausencias acumuladas: 0</p><p>Autoridades consideradas: 36</p><p>Ausentismo registrado: 0.00%</p></div>`)[0];
+                popup_d0adff1f286a564219647a3f7270e32a.setContent(html_0c87dd3045bbd6d95ba59204e08c6598);
+            
+        
+
+        circle_marker_758b074ebf64fc50b792bda7ca1fae58.bindPopup(popup_d0adff1f286a564219647a3f7270e32a)
+        ;
+
+        
+    
+    
+            circle_marker_758b074ebf64fc50b792bda7ca1fae58.bindTooltip(
+                `<div>
+                     Caraguatay: 0.00%
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_c1133e7eaa91e636eff0bc75716de528 = L.circleMarker(
+                [-27.4847961, -55.2985561],
+                {"bubblingMouseEvents": true, "color": "#2a9d8f", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#2a9d8f", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 1}
+            ).addTo(map_15e8259ee670bab5b59c4ce8a5ddf9fd);
+        
+    
+        var popup_d7cc159c7aa17a2565e5d1b8fa742be0 = L.popup({
+  "maxWidth": 280,
+});
+
+        
+            
+                var html_5fdcaad797b9bd8a8c078565b6fce69a = $(`<div id="html_5fdcaad797b9bd8a8c078565b6fce69a" style="width: 100.0%; height: 100.0%;"><b>Caá Yarí</b><p>Elecciones: 2023 y 2025</p><p>Ausencias acumuladas: 0</p><p>Autoridades consideradas: 24</p><p>Ausentismo registrado: 0.00%</p></div>`)[0];
+                popup_d7cc159c7aa17a2565e5d1b8fa742be0.setContent(html_5fdcaad797b9bd8a8c078565b6fce69a);
+            
+        
+
+        circle_marker_c1133e7eaa91e636eff0bc75716de528.bindPopup(popup_d7cc159c7aa17a2565e5d1b8fa742be0)
+        ;
+
+        
+    
+    
+            circle_marker_c1133e7eaa91e636eff0bc75716de528.bindTooltip(
+                `<div>
+                     Caá Yarí: 0.00%
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_644eac61eaa991206b7347ea0ba68c28 = L.circleMarker(
+                [-27.633535, -55.4971519],
+                {"bubblingMouseEvents": true, "color": "#2a9d8f", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#2a9d8f", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 1}
+            ).addTo(map_15e8259ee670bab5b59c4ce8a5ddf9fd);
+        
+    
+        var popup_026d2780c68adf068301043e18280842 = L.popup({
+  "maxWidth": 280,
+});
+
+        
+            
+                var html_aa914db054bb8b0737fe569ea405a613 = $(`<div id="html_aa914db054bb8b0737fe569ea405a613" style="width: 100.0%; height: 100.0%;"><b>Cerro Azul</b><p>Elecciones: 2023 y 2025</p><p>Ausencias acumuladas: 0</p><p>Autoridades consideradas: 90</p><p>Ausentismo registrado: 0.00%</p></div>`)[0];
+                popup_026d2780c68adf068301043e18280842.setContent(html_aa914db054bb8b0737fe569ea405a613);
+            
+        
+
+        circle_marker_644eac61eaa991206b7347ea0ba68c28.bindPopup(popup_026d2780c68adf068301043e18280842)
+        ;
+
+        
+    
+    
+            circle_marker_644eac61eaa991206b7347ea0ba68c28.bindTooltip(
+                `<div>
+                     Cerro Azul: 0.00%
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_832e6af6a2ea85bb434c1bddcf3ee0d7 = L.circleMarker(
+                [-27.5121087, -55.6093717],
+                {"bubblingMouseEvents": true, "color": "#ee964b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#ee964b", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 1}
+            ).addTo(map_15e8259ee670bab5b59c4ce8a5ddf9fd);
+        
+    
+        var popup_72d5a6c0bc3a8cd73029630a19e36199 = L.popup({
+  "maxWidth": 280,
+});
+
+        
+            
+                var html_d6b6c08f3e7222638ddff1510e89a263 = $(`<div id="html_d6b6c08f3e7222638ddff1510e89a263" style="width: 100.0%; height: 100.0%;"><b>Cerro Corá</b><p>Elecciones: 2023 y 2025</p><p>Ausencias acumuladas: 3</p><p>Autoridades consideradas: 38</p><p>Ausentismo registrado: 7.89%</p></div>`)[0];
+                popup_72d5a6c0bc3a8cd73029630a19e36199.setContent(html_d6b6c08f3e7222638ddff1510e89a263);
+            
+        
+
+        circle_marker_832e6af6a2ea85bb434c1bddcf3ee0d7.bindPopup(popup_72d5a6c0bc3a8cd73029630a19e36199)
+        ;
+
+        
+    
+    
+            circle_marker_832e6af6a2ea85bb434c1bddcf3ee0d7.bindTooltip(
+                `<div>
+                     Cerro Corá: 7.89%
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_28768a9e0c824d5b8ee97e185e1be409 = L.circleMarker(
+                [-27.3603243, -55.2323985],
+                {"bubblingMouseEvents": true, "color": "#2a9d8f", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#2a9d8f", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 1}
+            ).addTo(map_15e8259ee670bab5b59c4ce8a5ddf9fd);
+        
+    
+        var popup_f555a16c9a42d1d7d49826ea67b80b14 = L.popup({
+  "maxWidth": 280,
+});
+
+        
+            
+                var html_3df354f64fdbc6387292897c107c3b51 = $(`<div id="html_3df354f64fdbc6387292897c107c3b51" style="width: 100.0%; height: 100.0%;"><b>Colonia Alberdi</b><p>Elecciones: 2023 y 2025</p><p>Ausencias acumuladas: 0</p><p>Autoridades consideradas: 57</p><p>Ausentismo registrado: 0.00%</p></div>`)[0];
+                popup_f555a16c9a42d1d7d49826ea67b80b14.setContent(html_3df354f64fdbc6387292897c107c3b51);
+            
+        
+
+        circle_marker_28768a9e0c824d5b8ee97e185e1be409.bindPopup(popup_f555a16c9a42d1d7d49826ea67b80b14)
+        ;
+
+        
+    
+    
+            circle_marker_28768a9e0c824d5b8ee97e185e1be409.bindTooltip(
+                `<div>
+                     Colonia Alberdi: 0.00%
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_87edf98741906afc65dc75e5f21b607d = L.circleMarker(
+                [-27.3781456, -54.3518686],
+                {"bubblingMouseEvents": true, "color": "#f4d35e", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#f4d35e", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 1}
+            ).addTo(map_15e8259ee670bab5b59c4ce8a5ddf9fd);
+        
+    
+        var popup_46f96237692b0b0e15b7d2c37c78d7de = L.popup({
+  "maxWidth": 280,
+});
+
+        
+            
+                var html_c124daf5b9e7942b5e0d2fde97b8b4f4 = $(`<div id="html_c124daf5b9e7942b5e0d2fde97b8b4f4" style="width: 100.0%; height: 100.0%;"><b>Colonia Alicia</b><p>Elecciones: 2023 y 2025</p><p>Ausencias acumuladas: 2</p><p>Autoridades consideradas: 41</p><p>Ausentismo registrado: 4.88%</p></div>`)[0];
+                popup_46f96237692b0b0e15b7d2c37c78d7de.setContent(html_c124daf5b9e7942b5e0d2fde97b8b4f4);
+            
+        
+
+        circle_marker_87edf98741906afc65dc75e5f21b607d.bindPopup(popup_46f96237692b0b0e15b7d2c37c78d7de)
+        ;
+
+        
+    
+    
+            circle_marker_87edf98741906afc65dc75e5f21b607d.bindTooltip(
+                `<div>
+                     Colonia Alicia: 4.88%
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_65ea642d9cf3779c1a07d89c394289d6 = L.circleMarker(
+                [-27.2774032, -54.4586928],
+                {"bubblingMouseEvents": true, "color": "#f4d35e", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#f4d35e", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 1}
+            ).addTo(map_15e8259ee670bab5b59c4ce8a5ddf9fd);
+        
+    
+        var popup_caf48e52a8d2696a6a3680453abdf5d8 = L.popup({
+  "maxWidth": 280,
+});
+
+        
+            
+                var html_8e6de327e94655c62dd68326a1780c21 = $(`<div id="html_8e6de327e94655c62dd68326a1780c21" style="width: 100.0%; height: 100.0%;"><b>Colonia Aparecida</b><p>Elecciones: 2023 y 2025</p><p>Ausencias acumuladas: 1</p><p>Autoridades consideradas: 22</p><p>Ausentismo registrado: 4.55%</p></div>`)[0];
+                popup_caf48e52a8d2696a6a3680453abdf5d8.setContent(html_8e6de327e94655c62dd68326a1780c21);
+            
+        
+
+        circle_marker_65ea642d9cf3779c1a07d89c394289d6.bindPopup(popup_caf48e52a8d2696a6a3680453abdf5d8)
+        ;
+
+        
+    
+    
+            circle_marker_65ea642d9cf3779c1a07d89c394289d6.bindTooltip(
+                `<div>
+                     Colonia Aparecida: 4.55%
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_9ed8e5200aba64cf0cee0ee7e01fee87 = L.circleMarker(
+                [-27.4729052, -54.5223512],
+                {"bubblingMouseEvents": true, "color": "#2a9d8f", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#2a9d8f", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 1}
+            ).addTo(map_15e8259ee670bab5b59c4ce8a5ddf9fd);
+        
+    
+        var popup_c9d1eede512137e34ffc479284eb2fae = L.popup({
+  "maxWidth": 280,
+});
+
+        
+            
+                var html_618d816ac18ff92ef367b06daea356fe = $(`<div id="html_618d816ac18ff92ef367b06daea356fe" style="width: 100.0%; height: 100.0%;"><b>Colonia Aurora</b><p>Elecciones: 2023 y 2025</p><p>Ausencias acumuladas: 0</p><p>Autoridades consideradas: 84</p><p>Ausentismo registrado: 0.00%</p></div>`)[0];
+                popup_c9d1eede512137e34ffc479284eb2fae.setContent(html_618d816ac18ff92ef367b06daea356fe);
+            
+        
+
+        circle_marker_9ed8e5200aba64cf0cee0ee7e01fee87.bindPopup(popup_c9d1eede512137e34ffc479284eb2fae)
+        ;
+
+        
+    
+    
+            circle_marker_9ed8e5200aba64cf0cee0ee7e01fee87.bindTooltip(
+                `<div>
+                     Colonia Aurora: 0.00%
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_c5d58882b413b201b43a19f9a1cfdd07 = L.circleMarker(
+                [-26.2360274, -54.6029663],
+                {"bubblingMouseEvents": true, "color": "#a7c957", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#a7c957", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 1}
+            ).addTo(map_15e8259ee670bab5b59c4ce8a5ddf9fd);
+        
+    
+        var popup_28b3af009d3323ddff292a13e57cd217 = L.popup({
+  "maxWidth": 280,
+});
+
+        
+            
+                var html_5523940f624f9dadd483bb1a12482c67 = $(`<div id="html_5523940f624f9dadd483bb1a12482c67" style="width: 100.0%; height: 100.0%;"><b>Colonia Delicia</b><p>Elecciones: 2023 y 2025</p><p>Ausencias acumuladas: 4</p><p>Autoridades consideradas: 102</p><p>Ausentismo registrado: 3.92%</p></div>`)[0];
+                popup_28b3af009d3323ddff292a13e57cd217.setContent(html_5523940f624f9dadd483bb1a12482c67);
+            
+        
+
+        circle_marker_c5d58882b413b201b43a19f9a1cfdd07.bindPopup(popup_28b3af009d3323ddff292a13e57cd217)
+        ;
+
+        
+    
+    
+            circle_marker_c5d58882b413b201b43a19f9a1cfdd07.bindTooltip(
+                `<div>
+                     Colonia Delicia: 3.92%
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_cdba387c515f82d64175559728e78284 = L.circleMarker(
+                [-27.0457241, -54.1621947],
+                {"bubblingMouseEvents": true, "color": "#a7c957", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#a7c957", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 1}
+            ).addTo(map_15e8259ee670bab5b59c4ce8a5ddf9fd);
+        
+    
+        var popup_7d0c3ac3e43df1637e9c1f86b2399fd8 = L.popup({
+  "maxWidth": 280,
+});
+
+        
+            
+                var html_9d673ad8e85c13624c57dcbec76f55b4 = $(`<div id="html_9d673ad8e85c13624c57dcbec76f55b4" style="width: 100.0%; height: 100.0%;"><b>Colonia La Flor</b><p>Elecciones: 2023 y 2025</p><p>Ausencias acumuladas: 1</p><p>Autoridades consideradas: 36</p><p>Ausentismo registrado: 2.78%</p></div>`)[0];
+                popup_7d0c3ac3e43df1637e9c1f86b2399fd8.setContent(html_9d673ad8e85c13624c57dcbec76f55b4);
+            
+        
+
+        circle_marker_cdba387c515f82d64175559728e78284.bindPopup(popup_7d0c3ac3e43df1637e9c1f86b2399fd8)
+        ;
+
+        
+    
+    
+            circle_marker_cdba387c515f82d64175559728e78284.bindTooltip(
+                `<div>
+                     Colonia La Flor: 2.78%
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_6cfdbd4026143d0e42fb74da2379102c = L.circleMarker(
+                [-27.1735094, -54.2221],
+                {"bubblingMouseEvents": true, "color": "#a7c957", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#a7c957", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 1}
+            ).addTo(map_15e8259ee670bab5b59c4ce8a5ddf9fd);
+        
+    
+        var popup_345e76f5a9e7fb13b50d46e8060e7a4b = L.popup({
+  "maxWidth": 280,
+});
+
+        
+            
+                var html_b6cb42139577fa4ed66abebfe38215ea = $(`<div id="html_b6cb42139577fa4ed66abebfe38215ea" style="width: 100.0%; height: 100.0%;"><b>Colonia Mandarina</b><p>Elecciones: 2023 y 2025</p><p>Ausencias acumuladas: 3</p><p>Autoridades consideradas: 89</p><p>Ausentismo registrado: 3.37%</p></div>`)[0];
+                popup_345e76f5a9e7fb13b50d46e8060e7a4b.setContent(html_b6cb42139577fa4ed66abebfe38215ea);
+            
+        
+
+        circle_marker_6cfdbd4026143d0e42fb74da2379102c.bindPopup(popup_345e76f5a9e7fb13b50d46e8060e7a4b)
+        ;
+
+        
+    
+    
+            circle_marker_6cfdbd4026143d0e42fb74da2379102c.bindTooltip(
+                `<div>
+                     Colonia Mandarina: 3.37%
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_6706125aa0473e48502a03c93e91a2de = L.circleMarker(
+                [-27.2260483, -54.1034738],
+                {"bubblingMouseEvents": true, "color": "#2a9d8f", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#2a9d8f", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 1}
+            ).addTo(map_15e8259ee670bab5b59c4ce8a5ddf9fd);
+        
+    
+        var popup_b3b9a29e49237a798caa9893ad29c5de = L.popup({
+  "maxWidth": 280,
+});
+
+        
+            
+                var html_332ac429d2c7fdf5d7ff918f68e78464 = $(`<div id="html_332ac429d2c7fdf5d7ff918f68e78464" style="width: 100.0%; height: 100.0%;"><b>Colonia Paraíso</b><p>Elecciones: 2023 y 2025</p><p>Ausencias acumuladas: 0</p><p>Autoridades consideradas: 45</p><p>Ausentismo registrado: 0.00%</p></div>`)[0];
+                popup_b3b9a29e49237a798caa9893ad29c5de.setContent(html_332ac429d2c7fdf5d7ff918f68e78464);
+            
+        
+
+        circle_marker_6706125aa0473e48502a03c93e91a2de.bindPopup(popup_b3b9a29e49237a798caa9893ad29c5de)
+        ;
+
+        
+    
+    
+            circle_marker_6706125aa0473e48502a03c93e91a2de.bindTooltip(
+                `<div>
+                     Colonia Paraíso: 0.00%
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_6249223ef3e35539dc12c2852d092eb9 = L.circleMarker(
+                [-26.9817689, -55.3181406],
+                {"bubblingMouseEvents": true, "color": "#2a9d8f", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#2a9d8f", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 1}
+            ).addTo(map_15e8259ee670bab5b59c4ce8a5ddf9fd);
+        
+    
+        var popup_49218828a18dc776ffe5b00f0fc9846d = L.popup({
+  "maxWidth": 280,
+});
+
+        
+            
+                var html_0f4801667a144c77b6523c62e5bc5022 = $(`<div id="html_0f4801667a144c77b6523c62e5bc5022" style="width: 100.0%; height: 100.0%;"><b>Colonia Polana</b><p>Elecciones: 2023 y 2025</p><p>Ausencias acumuladas: 0</p><p>Autoridades consideradas: 23</p><p>Ausentismo registrado: 0.00%</p></div>`)[0];
+                popup_49218828a18dc776ffe5b00f0fc9846d.setContent(html_0f4801667a144c77b6523c62e5bc5022);
+            
+        
+
+        circle_marker_6249223ef3e35539dc12c2852d092eb9.bindPopup(popup_49218828a18dc776ffe5b00f0fc9846d)
+        ;
+
+        
+    
+    
+            circle_marker_6249223ef3e35539dc12c2852d092eb9.bindTooltip(
+                `<div>
+                     Colonia Polana: 0.00%
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_3ea552ecea818314637be88826050c4e = L.circleMarker(
+                [-26.3313809, -54.6237161],
+                {"bubblingMouseEvents": true, "color": "#2a9d8f", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#2a9d8f", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 1}
+            ).addTo(map_15e8259ee670bab5b59c4ce8a5ddf9fd);
+        
+    
+        var popup_50b4622b22e4830788c2e94422797cd4 = L.popup({
+  "maxWidth": 280,
+});
+
+        
+            
+                var html_6b8ba345b170287acce6171eb5892c33 = $(`<div id="html_6b8ba345b170287acce6171eb5892c33" style="width: 100.0%; height: 100.0%;"><b>Colonia Victoria</b><p>Elecciones: 2023 y 2025</p><p>Ausencias acumuladas: 0</p><p>Autoridades consideradas: 72</p><p>Ausentismo registrado: 0.00%</p></div>`)[0];
+                popup_50b4622b22e4830788c2e94422797cd4.setContent(html_6b8ba345b170287acce6171eb5892c33);
+            
+        
+
+        circle_marker_3ea552ecea818314637be88826050c4e.bindPopup(popup_50b4622b22e4830788c2e94422797cd4)
+        ;
+
+        
+    
+    
+            circle_marker_3ea552ecea818314637be88826050c4e.bindTooltip(
+                `<div>
+                     Colonia Victoria: 0.00%
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_818f33c685c04e8b8918300bb740b3a4 = L.circleMarker(
+                [-25.9693011, -54.5696922],
+                {"bubblingMouseEvents": true, "color": "#2a9d8f", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#2a9d8f", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 1}
+            ).addTo(map_15e8259ee670bab5b59c4ce8a5ddf9fd);
+        
+    
+        var popup_0a2dfa4f0fcf2e64bbe12e91ea4f622f = L.popup({
+  "maxWidth": 280,
+});
+
+        
+            
+                var html_a1e8fed99916e1c503498b5b02be0684 = $(`<div id="html_a1e8fed99916e1c503498b5b02be0684" style="width: 100.0%; height: 100.0%;"><b>Colonia Wanda</b><p>Elecciones: 2023 y 2025</p><p>Ausencias acumuladas: 2</p><p>Autoridades consideradas: 228</p><p>Ausentismo registrado: 0.88%</p></div>`)[0];
+                popup_0a2dfa4f0fcf2e64bbe12e91ea4f622f.setContent(html_a1e8fed99916e1c503498b5b02be0684);
+            
+        
+
+        circle_marker_818f33c685c04e8b8918300bb740b3a4.bindPopup(popup_0a2dfa4f0fcf2e64bbe12e91ea4f622f)
+        ;
+
+        
+    
+    
+            circle_marker_818f33c685c04e8b8918300bb740b3a4.bindTooltip(
+                `<div>
+                     Colonia Wanda: 0.88%
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_0b5d9d86775a48a0c4f64d0991cde19f = L.circleMarker(
+                [-25.6702892, -54.0427457],
+                {"bubblingMouseEvents": true, "color": "#2a9d8f", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#2a9d8f", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 1}
+            ).addTo(map_15e8259ee670bab5b59c4ce8a5ddf9fd);
+        
+    
+        var popup_5d17aadf6c7ecdd13c1a80453efa499e = L.popup({
+  "maxWidth": 280,
+});
+
+        
+            
+                var html_fa53799766600668c9de184f2ffb2174 = $(`<div id="html_fa53799766600668c9de184f2ffb2174" style="width: 100.0%; height: 100.0%;"><b>Comandante Andresito</b><p>Elecciones: 2023 y 2025</p><p>Ausencias acumuladas: 4</p><p>Autoridades consideradas: 238</p><p>Ausentismo registrado: 1.68%</p></div>`)[0];
+                popup_5d17aadf6c7ecdd13c1a80453efa499e.setContent(html_fa53799766600668c9de184f2ffb2174);
+            
+        
+
+        circle_marker_0b5d9d86775a48a0c4f64d0991cde19f.bindPopup(popup_5d17aadf6c7ecdd13c1a80453efa499e)
+        ;
+
+        
+    
+    
+            circle_marker_0b5d9d86775a48a0c4f64d0991cde19f.bindTooltip(
+                `<div>
+                     Comandante Andresito: 1.68%
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_932e58140e951bf0095087974cd85b29 = L.circleMarker(
+                [-27.9805862, -55.5216043],
+                {"bubblingMouseEvents": true, "color": "#a7c957", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#a7c957", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 1}
+            ).addTo(map_15e8259ee670bab5b59c4ce8a5ddf9fd);
+        
+    
+        var popup_93b1ea5ba4a2f95f8ed3da4fdb7bff27 = L.popup({
+  "maxWidth": 280,
+});
+
+        
+            
+                var html_88fcc5679bce08ee1ce87aa04c4382fb = $(`<div id="html_88fcc5679bce08ee1ce87aa04c4382fb" style="width: 100.0%; height: 100.0%;"><b>Concepción de la Sierra</b><p>Elecciones: 2023 y 2025</p><p>Ausencias acumuladas: 3</p><p>Autoridades consideradas: 114</p><p>Ausentismo registrado: 2.63%</p></div>`)[0];
+                popup_93b1ea5ba4a2f95f8ed3da4fdb7bff27.setContent(html_88fcc5679bce08ee1ce87aa04c4382fb);
+            
+        
+
+        circle_marker_932e58140e951bf0095087974cd85b29.bindPopup(popup_93b1ea5ba4a2f95f8ed3da4fdb7bff27)
+        ;
+
+        
+    
+    
+            circle_marker_932e58140e951bf0095087974cd85b29.bindTooltip(
+                `<div>
+                     Concepción de la Sierra: 2.63%
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_ed920cd0fe1eb33f3bf90b1511a8e648 = L.circleMarker(
+                [-27.1294703, -55.5108653],
+                {"bubblingMouseEvents": true, "color": "#2a9d8f", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#2a9d8f", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 1}
+            ).addTo(map_15e8259ee670bab5b59c4ce8a5ddf9fd);
+        
+    
+        var popup_87deedc021cb598f8a971a72e76afc0c = L.popup({
+  "maxWidth": 280,
+});
+
+        
+            
+                var html_6ce4c01a6b44a6717a299dfd6867fdde = $(`<div id="html_6ce4c01a6b44a6717a299dfd6867fdde" style="width: 100.0%; height: 100.0%;"><b>Corpus Christi</b><p>Elecciones: 2023 y 2025</p><p>Ausencias acumuladas: 1</p><p>Autoridades consideradas: 57</p><p>Ausentismo registrado: 1.75%</p></div>`)[0];
+                popup_87deedc021cb598f8a971a72e76afc0c.setContent(html_6ce4c01a6b44a6717a299dfd6867fdde);
+            
+        
+
+        circle_marker_ed920cd0fe1eb33f3bf90b1511a8e648.bindPopup(popup_87deedc021cb598f8a971a72e76afc0c)
+        ;
+
+        
+    
+    
+            circle_marker_ed920cd0fe1eb33f3bf90b1511a8e648.bindTooltip(
+                `<div>
+                     Corpus Christi: 1.75%
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_2c329468af1e43a9a62c54899a0081b1 = L.circleMarker(
+                [-27.4651164, -55.8584928],
+                {"bubblingMouseEvents": true, "color": "#ee964b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#ee964b", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 1}
+            ).addTo(map_15e8259ee670bab5b59c4ce8a5ddf9fd);
+        
+    
+        var popup_7de0b53b5ab33e54eb2cc4c80696a03f = L.popup({
+  "maxWidth": 280,
+});
+
+        
+            
+                var html_f5b0d38bde278b1e1f93ce0118d39bd2 = $(`<div id="html_f5b0d38bde278b1e1f93ce0118d39bd2" style="width: 100.0%; height: 100.0%;"><b>Don Santiago</b><p>Elecciones: 2023 y 2025</p><p>Ausencias acumuladas: 21</p><p>Autoridades consideradas: 240</p><p>Ausentismo registrado: 8.75%</p></div>`)[0];
+                popup_7de0b53b5ab33e54eb2cc4c80696a03f.setContent(html_f5b0d38bde278b1e1f93ce0118d39bd2);
+            
+        
+
+        circle_marker_2c329468af1e43a9a62c54899a0081b1.bindPopup(popup_7de0b53b5ab33e54eb2cc4c80696a03f)
+        ;
+
+        
+    
+    
+            circle_marker_2c329468af1e43a9a62c54899a0081b1.bindTooltip(
+                `<div>
+                     Don Santiago: 8.75%
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_a342b1eef042da415ed1bfb359df0b36 = L.circleMarker(
+                [-27.6991791, -55.2519058],
+                {"bubblingMouseEvents": true, "color": "#2a9d8f", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#2a9d8f", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 1}
+            ).addTo(map_15e8259ee670bab5b59c4ce8a5ddf9fd);
+        
+    
+        var popup_b9fc035fa9d0564e85b96f7d8e07348d = L.popup({
+  "maxWidth": 280,
+});
+
+        
+            
+                var html_dbd4e64889b82b714d87c474a81119a6 = $(`<div id="html_dbd4e64889b82b714d87c474a81119a6" style="width: 100.0%; height: 100.0%;"><b>Dos Arroyos</b><p>Elecciones: 2023 y 2025</p><p>Ausencias acumuladas: 0</p><p>Autoridades consideradas: 60</p><p>Ausentismo registrado: 0.00%</p></div>`)[0];
+                popup_b9fc035fa9d0564e85b96f7d8e07348d.setContent(html_dbd4e64889b82b714d87c474a81119a6);
+            
+        
+
+        circle_marker_a342b1eef042da415ed1bfb359df0b36.bindPopup(popup_b9fc035fa9d0564e85b96f7d8e07348d)
+        ;
+
+        
+    
+    
+            circle_marker_a342b1eef042da415ed1bfb359df0b36.bindTooltip(
+                `<div>
+                     Dos Arroyos: 0.00%
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_8e7ad27df1aee63667d66fdb2e04fab7 = L.circleMarker(
+                [-27.0197207, -54.6842665],
+                {"bubblingMouseEvents": true, "color": "#a7c957", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#a7c957", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 1}
+            ).addTo(map_15e8259ee670bab5b59c4ce8a5ddf9fd);
+        
+    
+        var popup_7a19a014b64ff290a097634ebac4990e = L.popup({
+  "maxWidth": 280,
+});
+
+        
+            
+                var html_98341410173d6f819b42a6dfb403edd9 = $(`<div id="html_98341410173d6f819b42a6dfb403edd9" style="width: 100.0%; height: 100.0%;"><b>Dos de Mayo</b><p>Elecciones: 2023 y 2025</p><p>Ausencias acumuladas: 6</p><p>Autoridades consideradas: 200</p><p>Ausentismo registrado: 3.00%</p></div>`)[0];
+                popup_7a19a014b64ff290a097634ebac4990e.setContent(html_98341410173d6f819b42a6dfb403edd9);
+            
+        
+
+        circle_marker_8e7ad27df1aee63667d66fdb2e04fab7.bindPopup(popup_7a19a014b64ff290a097634ebac4990e)
+        ;
+
+        
+    
+    
+            circle_marker_8e7ad27df1aee63667d66fdb2e04fab7.bindTooltip(
+                `<div>
+                     Dos de Mayo: 3.00%
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_c4da87eed64cb9dc285777769c2f7a1d = L.circleMarker(
+                [-26.7165421, -54.8134672],
+                {"bubblingMouseEvents": true, "color": "#2a9d8f", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#2a9d8f", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 1}
+            ).addTo(map_15e8259ee670bab5b59c4ce8a5ddf9fd);
+        
+    
+        var popup_dfe1a34e21452fb86003844132eb8086 = L.popup({
+  "maxWidth": 280,
+});
+
+        
+            
+                var html_2d596261f8ecb0b1088494b8d279673e = $(`<div id="html_2d596261f8ecb0b1088494b8d279673e" style="width: 100.0%; height: 100.0%;"><b>El Alcázar</b><p>Elecciones: 2023 y 2025</p><p>Ausencias acumuladas: 0</p><p>Autoridades consideradas: 75</p><p>Ausentismo registrado: 0.00%</p></div>`)[0];
+                popup_dfe1a34e21452fb86003844132eb8086.setContent(html_2d596261f8ecb0b1088494b8d279673e);
+            
+        
+
+        circle_marker_c4da87eed64cb9dc285777769c2f7a1d.bindPopup(popup_dfe1a34e21452fb86003844132eb8086)
+        ;
+
+        
+    
+    
+            circle_marker_c4da87eed64cb9dc285777769c2f7a1d.bindTooltip(
+                `<div>
+                     El Alcázar: 0.00%
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_15c518bd06abbf44bc46ae3b968ea3aa = L.circleMarker(
+                [-27.29549, -54.1963432],
+                {"bubblingMouseEvents": true, "color": "#2a9d8f", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#2a9d8f", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 1}
+            ).addTo(map_15e8259ee670bab5b59c4ce8a5ddf9fd);
+        
+    
+        var popup_3c9b019dbbf6caf308d121e85a5a5ff9 = L.popup({
+  "maxWidth": 280,
+});
+
+        
+            
+                var html_e4611b089c5f77bee0f687052f80e5de = $(`<div id="html_e4611b089c5f77bee0f687052f80e5de" style="width: 100.0%; height: 100.0%;"><b>El Soberbio</b><p>Elecciones: 2023 y 2025</p><p>Ausencias acumuladas: 2</p><p>Autoridades consideradas: 192</p><p>Ausentismo registrado: 1.04%</p></div>`)[0];
+                popup_3c9b019dbbf6caf308d121e85a5a5ff9.setContent(html_e4611b089c5f77bee0f687052f80e5de);
+            
+        
+
+        circle_marker_15c518bd06abbf44bc46ae3b968ea3aa.bindPopup(popup_3c9b019dbbf6caf308d121e85a5a5ff9)
+        ;
+
+        
+    
+    
+            circle_marker_15c518bd06abbf44bc46ae3b968ea3aa.bindTooltip(
+                `<div>
+                     El Soberbio: 1.04%
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_622613212f4986d99d065e39b008be16 = L.circleMarker(
+                [-26.4048555, -54.6262079],
+                {"bubblingMouseEvents": true, "color": "#a7c957", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#a7c957", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 1}
+            ).addTo(map_15e8259ee670bab5b59c4ce8a5ddf9fd);
+        
+    
+        var popup_9c4d6027e50c52232a822487d4fc7850 = L.popup({
+  "maxWidth": 280,
+});
+
+        
+            
+                var html_9344017b5836ece445caf10fa1c5f736 = $(`<div id="html_9344017b5836ece445caf10fa1c5f736" style="width: 100.0%; height: 100.0%;"><b>Eldorado</b><p>Elecciones: 2023 y 2025</p><p>Ausencias acumuladas: 13</p><p>Autoridades consideradas: 601</p><p>Ausentismo registrado: 2.16%</p></div>`)[0];
+                popup_9c4d6027e50c52232a822487d4fc7850.setContent(html_9344017b5836ece445caf10fa1c5f736);
+            
+        
+
+        circle_marker_622613212f4986d99d065e39b008be16.bindPopup(popup_9c4d6027e50c52232a822487d4fc7850)
+        ;
+
+        
+    
+    
+            circle_marker_622613212f4986d99d065e39b008be16.bindTooltip(
+                `<div>
+                     Eldorado: 2.16%
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_43c7608a14c83790b9a51c8e66bee1c8 = L.circleMarker(
+                [-27.3640443, -55.8920354],
+                {"bubblingMouseEvents": true, "color": "#a7c957", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#a7c957", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 1}
+            ).addTo(map_15e8259ee670bab5b59c4ce8a5ddf9fd);
+        
+    
+        var popup_15d8a8ba5f8d8192711a6df45352f094 = L.popup({
+  "maxWidth": 280,
+});
+
+        
+            
+                var html_3d0986309177c588b7e37c316eba226e = $(`<div id="html_3d0986309177c588b7e37c316eba226e" style="width: 100.0%; height: 100.0%;"><b>Eldorado Centro</b><p>Elecciones: 2023 y 2025</p><p>Ausencias acumuladas: 7</p><p>Autoridades consideradas: 304</p><p>Ausentismo registrado: 2.30%</p></div>`)[0];
+                popup_15d8a8ba5f8d8192711a6df45352f094.setContent(html_3d0986309177c588b7e37c316eba226e);
+            
+        
+
+        circle_marker_43c7608a14c83790b9a51c8e66bee1c8.bindPopup(popup_15d8a8ba5f8d8192711a6df45352f094)
+        ;
+
+        
+    
+    
+            circle_marker_43c7608a14c83790b9a51c8e66bee1c8.bindTooltip(
+                `<div>
+                     Eldorado Centro: 2.30%
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_74eb6d0ea9f549f8440c281a6f27151d = L.circleMarker(
+                [-27.6336429, -55.0852772],
+                {"bubblingMouseEvents": true, "color": "#2a9d8f", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#2a9d8f", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 1}
+            ).addTo(map_15e8259ee670bab5b59c4ce8a5ddf9fd);
+        
+    
+        var popup_51051edfbc76f49e015ae396de9038be = L.popup({
+  "maxWidth": 280,
+});
+
+        
+            
+                var html_e58dfc824b46e1132d951a212230c85b = $(`<div id="html_e58dfc824b46e1132d951a212230c85b" style="width: 100.0%; height: 100.0%;"><b>Florentino Ameghino</b><p>Elecciones: 2023 y 2025</p><p>Ausencias acumuladas: 0</p><p>Autoridades consideradas: 30</p><p>Ausentismo registrado: 0.00%</p></div>`)[0];
+                popup_51051edfbc76f49e015ae396de9038be.setContent(html_e58dfc824b46e1132d951a212230c85b);
+            
+        
+
+        circle_marker_74eb6d0ea9f549f8440c281a6f27151d.bindPopup(popup_51051edfbc76f49e015ae396de9038be)
+        ;
+
+        
+    
+    
+            circle_marker_74eb6d0ea9f549f8440c281a6f27151d.bindTooltip(
+                `<div>
+                     Florentino Ameghino: 0.00%
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_b2f5304cdada93bba5d97654551fed55 = L.circleMarker(
+                [-26.7430092, -54.2978224],
+                {"bubblingMouseEvents": true, "color": "#2a9d8f", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#2a9d8f", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 1}
+            ).addTo(map_15e8259ee670bab5b59c4ce8a5ddf9fd);
+        
+    
+        var popup_1cb67d94de763c1def01e6ad7ca94486 = L.popup({
+  "maxWidth": 280,
+});
+
+        
+            
+                var html_300752c0ed5715979e648fc74615ac38 = $(`<div id="html_300752c0ed5715979e648fc74615ac38" style="width: 100.0%; height: 100.0%;"><b>Fracran</b><p>Elecciones: 2023 y 2025</p><p>Ausencias acumuladas: 0</p><p>Autoridades consideradas: 52</p><p>Ausentismo registrado: 0.00%</p></div>`)[0];
+                popup_1cb67d94de763c1def01e6ad7ca94486.setContent(html_300752c0ed5715979e648fc74615ac38);
+            
+        
+
+        circle_marker_b2f5304cdada93bba5d97654551fed55.bindPopup(popup_1cb67d94de763c1def01e6ad7ca94486)
+        ;
+
+        
+    
+    
+            circle_marker_b2f5304cdada93bba5d97654551fed55.bindTooltip(
+                `<div>
+                     Fracran: 0.00%
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_1813d7309abcdab442c82d74d44f5469 = L.circleMarker(
+                [-26.8190332, -54.9581018],
+                {"bubblingMouseEvents": true, "color": "#2a9d8f", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#2a9d8f", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 1}
+            ).addTo(map_15e8259ee670bab5b59c4ce8a5ddf9fd);
+        
+    
+        var popup_4e52ae92a752759c84cc3d35f2a8cb4e = L.popup({
+  "maxWidth": 280,
+});
+
+        
+            
+                var html_e21d88f73f3b04a84dbf0815e8f84d54 = $(`<div id="html_e21d88f73f3b04a84dbf0815e8f84d54" style="width: 100.0%; height: 100.0%;"><b>Garuhapé</b><p>Elecciones: 2023 y 2025</p><p>Ausencias acumuladas: 0</p><p>Autoridades consideradas: 129</p><p>Ausentismo registrado: 0.00%</p></div>`)[0];
+                popup_4e52ae92a752759c84cc3d35f2a8cb4e.setContent(html_e21d88f73f3b04a84dbf0815e8f84d54);
+            
+        
+
+        circle_marker_1813d7309abcdab442c82d74d44f5469.bindPopup(popup_4e52ae92a752759c84cc3d35f2a8cb4e)
+        ;
+
+        
+    
+    
+            circle_marker_1813d7309abcdab442c82d74d44f5469.bindTooltip(
+                `<div>
+                     Garuhapé: 0.00%
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_6351c81f0425e061f8b58f8e8cb77b52 = L.circleMarker(
+                [-27.4849245, -55.825694],
+                {"bubblingMouseEvents": true, "color": "#ee964b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#ee964b", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 1}
+            ).addTo(map_15e8259ee670bab5b59c4ce8a5ddf9fd);
+        
+    
+        var popup_f4f6d0c8556fa2fce9e4d64f86bdbd04 = L.popup({
+  "maxWidth": 280,
+});
+
+        
+            
+                var html_7e1e3a9272ae620a80d5a1316ab160c8 = $(`<div id="html_7e1e3a9272ae620a80d5a1316ab160c8" style="width: 100.0%; height: 100.0%;"><b>Garupá Centro</b><p>Elecciones: 2023 y 2025</p><p>Ausencias acumuladas: 21</p><p>Autoridades consideradas: 228</p><p>Ausentismo registrado: 9.21%</p></div>`)[0];
+                popup_f4f6d0c8556fa2fce9e4d64f86bdbd04.setContent(html_7e1e3a9272ae620a80d5a1316ab160c8);
+            
+        
+
+        circle_marker_6351c81f0425e061f8b58f8e8cb77b52.bindPopup(popup_f4f6d0c8556fa2fce9e4d64f86bdbd04)
+        ;
+
+        
+    
+    
+            circle_marker_6351c81f0425e061f8b58f8e8cb77b52.bindTooltip(
+                `<div>
+                     Garupá Centro: 9.21%
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_df0de11fe969ff6a5eae83a6729562d5 = L.circleMarker(
+                [-27.4260809, -55.1700945],
+                {"bubblingMouseEvents": true, "color": "#2a9d8f", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#2a9d8f", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 1}
+            ).addTo(map_15e8259ee670bab5b59c4ce8a5ddf9fd);
+        
+    
+        var popup_8e1889c5d823f5d79ef96ef112c4a063 = L.popup({
+  "maxWidth": 280,
+});
+
+        
+            
+                var html_248cd67afe29b9ed4c7af3421f819fd9 = $(`<div id="html_248cd67afe29b9ed4c7af3421f819fd9" style="width: 100.0%; height: 100.0%;"><b>General Alvear</b><p>Elecciones: 2023 y 2025</p><p>Ausencias acumuladas: 0</p><p>Autoridades consideradas: 27</p><p>Ausentismo registrado: 0.00%</p></div>`)[0];
+                popup_8e1889c5d823f5d79ef96ef112c4a063.setContent(html_248cd67afe29b9ed4c7af3421f819fd9);
+            
+        
+
+        circle_marker_df0de11fe969ff6a5eae83a6729562d5.bindPopup(popup_8e1889c5d823f5d79ef96ef112c4a063)
+        ;
+
+        
+    
+    
+            circle_marker_df0de11fe969ff6a5eae83a6729562d5.bindTooltip(
+                `<div>
+                     General Alvear: 0.00%
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_49f08dec195814ec1e66ba4f5b9566c8 = L.circleMarker(
+                [-27.1078736, -55.3766559],
+                {"bubblingMouseEvents": true, "color": "#2a9d8f", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#2a9d8f", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 1}
+            ).addTo(map_15e8259ee670bab5b59c4ce8a5ddf9fd);
+        
+    
+        var popup_36d09bf61e4bcd770eae58a18743f58a = L.popup({
+  "maxWidth": 280,
+});
+
+        
+            
+                var html_e4611160a9d6613c1ac591c8116a9ae8 = $(`<div id="html_e4611160a9d6613c1ac591c8116a9ae8" style="width: 100.0%; height: 100.0%;"><b>General Urquiza</b><p>Elecciones: 2023 y 2025</p><p>Ausencias acumuladas: 0</p><p>Autoridades consideradas: 33</p><p>Ausentismo registrado: 0.00%</p></div>`)[0];
+                popup_36d09bf61e4bcd770eae58a18743f58a.setContent(html_e4611160a9d6613c1ac591c8116a9ae8);
+            
+        
+
+        circle_marker_49f08dec195814ec1e66ba4f5b9566c8.bindPopup(popup_36d09bf61e4bcd770eae58a18743f58a)
+        ;
+
+        
+    
+    
+            circle_marker_49f08dec195814ec1e66ba4f5b9566c8.bindTooltip(
+                `<div>
+                     General Urquiza: 0.00%
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_7025432f4ce6c5e070e60d08dfe1e5e2 = L.circleMarker(
+                [-27.6661265, -55.2136008],
+                {"bubblingMouseEvents": true, "color": "#2a9d8f", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#2a9d8f", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 1}
+            ).addTo(map_15e8259ee670bab5b59c4ce8a5ddf9fd);
+        
+    
+        var popup_ee19509dc10f5cd3eb68bb60684bec2e = L.popup({
+  "maxWidth": 280,
+});
+
+        
+            
+                var html_2a6212fe1a3426962e440e9ce9067a56 = $(`<div id="html_2a6212fe1a3426962e440e9ce9067a56" style="width: 100.0%; height: 100.0%;"><b>Gobernador López</b><p>Elecciones: 2023 y 2025</p><p>Ausencias acumuladas: 0</p><p>Autoridades consideradas: 36</p><p>Ausentismo registrado: 0.00%</p></div>`)[0];
+                popup_ee19509dc10f5cd3eb68bb60684bec2e.setContent(html_2a6212fe1a3426962e440e9ce9067a56);
+            
+        
+
+        circle_marker_7025432f4ce6c5e070e60d08dfe1e5e2.bindPopup(popup_ee19509dc10f5cd3eb68bb60684bec2e)
+        ;
+
+        
+    
+    
+            circle_marker_7025432f4ce6c5e070e60d08dfe1e5e2.bindTooltip(
+                `<div>
+                     Gobernador López: 0.00%
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_d22f6a2f94fcad6475fa776ed3ca8403 = L.circleMarker(
+                [-27.1901724, -55.4690976],
+                {"bubblingMouseEvents": true, "color": "#a7c957", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#a7c957", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 1}
+            ).addTo(map_15e8259ee670bab5b59c4ce8a5ddf9fd);
+        
+    
+        var popup_66458f3d855209fb155d1d1c8ec42342 = L.popup({
+  "maxWidth": 280,
+});
+
+        
+            
+                var html_700cdfb88ec96ce095c130c5f95df638 = $(`<div id="html_700cdfb88ec96ce095c130c5f95df638" style="width: 100.0%; height: 100.0%;"><b>Gobernador Roca</b><p>Elecciones: 2023 y 2025</p><p>Ausencias acumuladas: 2</p><p>Autoridades consideradas: 96</p><p>Ausentismo registrado: 2.08%</p></div>`)[0];
+                popup_66458f3d855209fb155d1d1c8ec42342.setContent(html_700cdfb88ec96ce095c130c5f95df638);
+            
+        
+
+        circle_marker_d22f6a2f94fcad6475fa776ed3ca8403.bindPopup(popup_66458f3d855209fb155d1d1c8ec42342)
+        ;
+
+        
+    
+    
+            circle_marker_d22f6a2f94fcad6475fa776ed3ca8403.bindTooltip(
+                `<div>
+                     Gobernador Roca: 2.08%
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_73b0f297d924608d9cfb5e90c5ab3edc = L.circleMarker(
+                [-27.5230159, -55.1578261],
+                {"bubblingMouseEvents": true, "color": "#2a9d8f", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#2a9d8f", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 1}
+            ).addTo(map_15e8259ee670bab5b59c4ce8a5ddf9fd);
+        
+    
+        var popup_03d196046e217c2477342c26f533e0c0 = L.popup({
+  "maxWidth": 280,
+});
+
+        
+            
+                var html_d8734525b5889a962630642c968d6f09 = $(`<div id="html_d8734525b5889a962630642c968d6f09" style="width: 100.0%; height: 100.0%;"><b>Guaraní</b><p>Elecciones: 2023 y 2025</p><p>Ausencias acumuladas: 0</p><p>Autoridades consideradas: 125</p><p>Ausentismo registrado: 0.00%</p></div>`)[0];
+                popup_03d196046e217c2477342c26f533e0c0.setContent(html_d8734525b5889a962630642c968d6f09);
+            
+        
+
+        circle_marker_73b0f297d924608d9cfb5e90c5ab3edc.bindPopup(popup_03d196046e217c2477342c26f533e0c0)
+        ;
+
+        
+    
+    
+            circle_marker_73b0f297d924608d9cfb5e90c5ab3edc.bindTooltip(
+                `<div>
+                     Guaraní: 0.00%
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_fccce94c3b420a1cccf70c90b837eb30 = L.circleMarker(
+                [-27.0921549, -55.2862161],
+                {"bubblingMouseEvents": true, "color": "#a7c957", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#a7c957", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 1}
+            ).addTo(map_15e8259ee670bab5b59c4ce8a5ddf9fd);
+        
+    
+        var popup_78f92ca13b90fa50955ec5778d87f10a = L.popup({
+  "maxWidth": 280,
+});
+
+        
+            
+                var html_91bffa1d3bb62918893398b1eea09119 = $(`<div id="html_91bffa1d3bb62918893398b1eea09119" style="width: 100.0%; height: 100.0%;"><b>Hipólito Yrigoyen</b><p>Elecciones: 2023 y 2025</p><p>Ausencias acumuladas: 1</p><p>Autoridades consideradas: 45</p><p>Ausentismo registrado: 2.22%</p></div>`)[0];
+                popup_78f92ca13b90fa50955ec5778d87f10a.setContent(html_91bffa1d3bb62918893398b1eea09119);
+            
+        
+
+        circle_marker_fccce94c3b420a1cccf70c90b837eb30.bindPopup(popup_78f92ca13b90fa50955ec5778d87f10a)
+        ;
+
+        
+    
+    
+            circle_marker_fccce94c3b420a1cccf70c90b837eb30.bindTooltip(
+                `<div>
+                     Hipólito Yrigoyen: 2.22%
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_6aec0770ad9a5e2cf10157a7bb26cf03 = L.circleMarker(
+                [-27.8713642, -55.2622991],
+                {"bubblingMouseEvents": true, "color": "#2a9d8f", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#2a9d8f", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 1}
+            ).addTo(map_15e8259ee670bab5b59c4ce8a5ddf9fd);
+        
+    
+        var popup_76ede7ee9fbfdd161f5c28c7aa5163b4 = L.popup({
+  "maxWidth": 280,
+});
+
+        
+            
+                var html_f3b217900c86d436e4a9f927687be617 = $(`<div id="html_f3b217900c86d436e4a9f927687be617" style="width: 100.0%; height: 100.0%;"><b>Itacaruaré</b><p>Elecciones: 2023 y 2025</p><p>Ausencias acumuladas: 0</p><p>Autoridades consideradas: 63</p><p>Ausentismo registrado: 0.00%</p></div>`)[0];
+                popup_76ede7ee9fbfdd161f5c28c7aa5163b4.setContent(html_f3b217900c86d436e4a9f927687be617);
+            
+        
+
+        circle_marker_6aec0770ad9a5e2cf10157a7bb26cf03.bindPopup(popup_76ede7ee9fbfdd161f5c28c7aa5163b4)
+        ;
+
+        
+    
+    
+            circle_marker_6aec0770ad9a5e2cf10157a7bb26cf03.bindTooltip(
+                `<div>
+                     Itacaruaré: 0.00%
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_10939d74cd6c19d6587d916b6e900a02 = L.circleMarker(
+                [-27.4056878, -55.9927134],
+                {"bubblingMouseEvents": true, "color": "#ee964b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#ee964b", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 1}
+            ).addTo(map_15e8259ee670bab5b59c4ce8a5ddf9fd);
+        
+    
+        var popup_f9f97e1ddf5c0cb9caf376ec4e693dea = L.popup({
+  "maxWidth": 280,
+});
+
+        
+            
+                var html_ccbbb3afeb95665d00815d9770d6f1a8 = $(`<div id="html_ccbbb3afeb95665d00815d9770d6f1a8" style="width: 100.0%; height: 100.0%;"><b>Itaembé Guazú</b><p>Elecciones: 2023 y 2025</p><p>Ausencias acumuladas: 9</p><p>Autoridades consideradas: 106</p><p>Ausentismo registrado: 8.49%</p></div>`)[0];
+                popup_f9f97e1ddf5c0cb9caf376ec4e693dea.setContent(html_ccbbb3afeb95665d00815d9770d6f1a8);
+            
+        
+
+        circle_marker_10939d74cd6c19d6587d916b6e900a02.bindPopup(popup_f9f97e1ddf5c0cb9caf376ec4e693dea)
+        ;
+
+        
+    
+    
+            circle_marker_10939d74cd6c19d6587d916b6e900a02.bindTooltip(
+                `<div>
+                     Itaembé Guazú: 8.49%
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_b00c3658947469aa0c8df2e92f3ccdba = L.circleMarker(
+                [-27.4116814, -55.9563231],
+                {"bubblingMouseEvents": true, "color": "#ee964b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#ee964b", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 1}
+            ).addTo(map_15e8259ee670bab5b59c4ce8a5ddf9fd);
+        
+    
+        var popup_448c2b57ca38991e375177e0a8facede = L.popup({
+  "maxWidth": 280,
+});
+
+        
+            
+                var html_2928837aefcd597d4a95f7493a7aa191 = $(`<div id="html_2928837aefcd597d4a95f7493a7aa191" style="width: 100.0%; height: 100.0%;"><b>Itaembé Miní</b><p>Elecciones: 2023 y 2025</p><p>Ausencias acumuladas: 36</p><p>Autoridades consideradas: 445</p><p>Ausentismo registrado: 8.09%</p></div>`)[0];
+                popup_448c2b57ca38991e375177e0a8facede.setContent(html_2928837aefcd597d4a95f7493a7aa191);
+            
+        
+
+        circle_marker_b00c3658947469aa0c8df2e92f3ccdba.bindPopup(popup_448c2b57ca38991e375177e0a8facede)
+        ;
+
+        
+    
+    
+            circle_marker_b00c3658947469aa0c8df2e92f3ccdba.bindTooltip(
+                `<div>
+                     Itaembé Miní: 8.09%
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_401462e5573bb5bfb9d0b5d17cadec7d = L.circleMarker(
+                [-27.0430577, -55.2271966],
+                {"bubblingMouseEvents": true, "color": "#2a9d8f", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#2a9d8f", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 1}
+            ).addTo(map_15e8259ee670bab5b59c4ce8a5ddf9fd);
+        
+    
+        var popup_2fd7cf063220070c495c903d0aef7634 = L.popup({
+  "maxWidth": 280,
+});
+
+        
+            
+                var html_fbe0bd3e628df643e6bf4bb55992d862 = $(`<div id="html_fbe0bd3e628df643e6bf4bb55992d862" style="width: 100.0%; height: 100.0%;"><b>Jardín América</b><p>Elecciones: 2023 y 2025</p><p>Ausencias acumuladas: 5</p><p>Autoridades consideradas: 359</p><p>Ausentismo registrado: 1.39%</p></div>`)[0];
+                popup_2fd7cf063220070c495c903d0aef7634.setContent(html_fbe0bd3e628df643e6bf4bb55992d862);
+            
+        
+
+        circle_marker_401462e5573bb5bfb9d0b5d17cadec7d.bindPopup(popup_2fd7cf063220070c495c903d0aef7634)
+        ;
+
+        
+    
+    
+            circle_marker_401462e5573bb5bfb9d0b5d17cadec7d.bindTooltip(
+                `<div>
+                     Jardín América: 1.39%
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_1c44c7613bdd28cab041ce69a9d69bde = L.circleMarker(
+                [-27.603636, -55.3235338],
+                {"bubblingMouseEvents": true, "color": "#2a9d8f", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#2a9d8f", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 1}
+            ).addTo(map_15e8259ee670bab5b59c4ce8a5ddf9fd);
+        
+    
+        var popup_3d37d4672d7a2b7da61db6fd4d640438 = L.popup({
+  "maxWidth": 280,
+});
+
+        
+            
+                var html_b2eb0ac477c6f8cc876a6785992af47a = $(`<div id="html_b2eb0ac477c6f8cc876a6785992af47a" style="width: 100.0%; height: 100.0%;"><b>Leandro N. Alem</b><p>Elecciones: 2023 y 2025</p><p>Ausencias acumuladas: 5</p><p>Autoridades consideradas: 436</p><p>Ausentismo registrado: 1.15%</p></div>`)[0];
+                popup_3d37d4672d7a2b7da61db6fd4d640438.setContent(html_b2eb0ac477c6f8cc876a6785992af47a);
+            
+        
+
+        circle_marker_1c44c7613bdd28cab041ce69a9d69bde.bindPopup(popup_3d37d4672d7a2b7da61db6fd4d640438)
+        ;
+
+        
+    
+    
+            circle_marker_1c44c7613bdd28cab041ce69a9d69bde.bindTooltip(
+                `<div>
+                     Leandro N. Alem: 1.15%
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_d44334b3974305bf12273b9bee3f6501 = L.circleMarker(
+                [-27.3791278, -55.9354706],
+                {"bubblingMouseEvents": true, "color": "#a7c957", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#a7c957", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 1}
+            ).addTo(map_15e8259ee670bab5b59c4ce8a5ddf9fd);
+        
+    
+        var popup_699db2e93f2787fe7ebaab2b7bedd7f2 = L.popup({
+  "maxWidth": 280,
+});
+
+        
+            
+                var html_4c66bbad033a68f3f3ee6285526f9f21 = $(`<div id="html_4c66bbad033a68f3f3ee6285526f9f21" style="width: 100.0%; height: 100.0%;"><b>Libertad</b><p>Elecciones: 2023 y 2025</p><p>Ausencias acumuladas: 4</p><p>Autoridades consideradas: 120</p><p>Ausentismo registrado: 3.33%</p></div>`)[0];
+                popup_699db2e93f2787fe7ebaab2b7bedd7f2.setContent(html_4c66bbad033a68f3f3ee6285526f9f21);
+            
+        
+
+        circle_marker_d44334b3974305bf12273b9bee3f6501.bindPopup(popup_699db2e93f2787fe7ebaab2b7bedd7f2)
+        ;
+
+        
+    
+    
+            circle_marker_d44334b3974305bf12273b9bee3f6501.bindTooltip(
+                `<div>
+                     Libertad: 3.33%
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_4ca53376bbae22b31071f94123396a8b = L.circleMarker(
+                [-27.3331111, -55.5224615],
+                {"bubblingMouseEvents": true, "color": "#2a9d8f", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#2a9d8f", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 1}
+            ).addTo(map_15e8259ee670bab5b59c4ce8a5ddf9fd);
+        
+    
+        var popup_728f47d5bcb7714f782486ce4fedfe22 = L.popup({
+  "maxWidth": 280,
+});
+
+        
+            
+                var html_69608f43bbd566f860e74f619d765236 = $(`<div id="html_69608f43bbd566f860e74f619d765236" style="width: 100.0%; height: 100.0%;"><b>Loreto</b><p>Elecciones: 2023 y 2025</p><p>Ausencias acumuladas: 0</p><p>Autoridades consideradas: 24</p><p>Ausentismo registrado: 0.00%</p></div>`)[0];
+                popup_728f47d5bcb7714f782486ce4fedfe22.setContent(html_69608f43bbd566f860e74f619d765236);
+            
+        
+
+        circle_marker_4ca53376bbae22b31071f94123396a8b.bindPopup(popup_728f47d5bcb7714f782486ce4fedfe22)
+        ;
+
+        
+    
+    
+            circle_marker_4ca53376bbae22b31071f94123396a8b.bindTooltip(
+                `<div>
+                     Loreto: 0.00%
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_0425dd9097ee02e1f57159c5ae1b750f = L.circleMarker(
+                [-27.5569255, -55.0761591],
+                {"bubblingMouseEvents": true, "color": "#2a9d8f", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#2a9d8f", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 1}
+            ).addTo(map_15e8259ee670bab5b59c4ce8a5ddf9fd);
+        
+    
+        var popup_75fa05f7dc83c422dd4faf457bae2f46 = L.popup({
+  "maxWidth": 280,
+});
+
+        
+            
+                var html_d7b7dea87c49b121904a97dedf72b4aa = $(`<div id="html_d7b7dea87c49b121904a97dedf72b4aa" style="width: 100.0%; height: 100.0%;"><b>Los Helechos</b><p>Elecciones: 2023 y 2025</p><p>Ausencias acumuladas: 0</p><p>Autoridades consideradas: 108</p><p>Ausentismo registrado: 0.00%</p></div>`)[0];
+                popup_75fa05f7dc83c422dd4faf457bae2f46.setContent(html_d7b7dea87c49b121904a97dedf72b4aa);
+            
+        
+
+        circle_marker_0425dd9097ee02e1f57159c5ae1b750f.bindPopup(popup_75fa05f7dc83c422dd4faf457bae2f46)
+        ;
+
+        
+    
+    
+            circle_marker_0425dd9097ee02e1f57159c5ae1b750f.bindTooltip(
+                `<div>
+                     Los Helechos: 0.00%
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_b5d41eedcd47e5704fe581dc953792af = L.circleMarker(
+                [-27.7119594, -55.1574095],
+                {"bubblingMouseEvents": true, "color": "#2a9d8f", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#2a9d8f", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 1}
+            ).addTo(map_15e8259ee670bab5b59c4ce8a5ddf9fd);
+        
+    
+        var popup_de2ae91128f6599519099c6fe1604429 = L.popup({
+  "maxWidth": 280,
+});
+
+        
+            
+                var html_cf687ec83cbf210cecc87bdddde52e56 = $(`<div id="html_cf687ec83cbf210cecc87bdddde52e56" style="width: 100.0%; height: 100.0%;"><b>Mojón Grande</b><p>Elecciones: 2023 y 2025</p><p>Ausencias acumuladas: 0</p><p>Autoridades consideradas: 36</p><p>Ausentismo registrado: 0.00%</p></div>`)[0];
+                popup_de2ae91128f6599519099c6fe1604429.setContent(html_cf687ec83cbf210cecc87bdddde52e56);
+            
+        
+
+        circle_marker_b5d41eedcd47e5704fe581dc953792af.bindPopup(popup_de2ae91128f6599519099c6fe1604429)
+        ;
+
+        
+    
+    
+            circle_marker_b5d41eedcd47e5704fe581dc953792af.bindTooltip(
+                `<div>
+                     Mojón Grande: 0.00%
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_2007f2b30e15f1cb992219bf230ef39b = L.circleMarker(
+                [-38.741135, -62.2623292],
+                {"bubblingMouseEvents": true, "color": "#a7c957", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#a7c957", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 1}
+            ).addTo(map_15e8259ee670bab5b59c4ce8a5ddf9fd);
+        
+    
+        var popup_0667839f4a34f449d9a3ec1537dde185 = L.popup({
+  "maxWidth": 280,
+});
+
+        
+            
+                var html_259b24678c53c9b75f82ddaf23d9da2a = $(`<div id="html_259b24678c53c9b75f82ddaf23d9da2a" style="width: 100.0%; height: 100.0%;"><b>Monteagudo</b><p>Elecciones: 2023 y 2025</p><p>Ausencias acumuladas: 3</p><p>Autoridades consideradas: 82</p><p>Ausentismo registrado: 3.66%</p></div>`)[0];
+                popup_0667839f4a34f449d9a3ec1537dde185.setContent(html_259b24678c53c9b75f82ddaf23d9da2a);
+            
+        
+
+        circle_marker_2007f2b30e15f1cb992219bf230ef39b.bindPopup(popup_0667839f4a34f449d9a3ec1537dde185)
+        ;
+
+        
+    
+    
+            circle_marker_2007f2b30e15f1cb992219bf230ef39b.bindTooltip(
+                `<div>
+                     Monteagudo: 3.66%
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_57fd2c5e1465e844061acd3fe9810a54 = L.circleMarker(
+                [-26.5674207, -54.7590379],
+                {"bubblingMouseEvents": true, "color": "#2a9d8f", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#2a9d8f", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 1}
+            ).addTo(map_15e8259ee670bab5b59c4ce8a5ddf9fd);
+        
+    
+        var popup_3153de61df3ce88c93e78fb23d0ec382 = L.popup({
+  "maxWidth": 280,
+});
+
+        
+            
+                var html_8c4f6bf5722f55756d206f75e02e9e9d = $(`<div id="html_8c4f6bf5722f55756d206f75e02e9e9d" style="width: 100.0%; height: 100.0%;"><b>Montecarlo</b><p>Elecciones: 2023 y 2025</p><p>Ausencias acumuladas: 3</p><p>Autoridades consideradas: 350</p><p>Ausentismo registrado: 0.86%</p></div>`)[0];
+                popup_3153de61df3ce88c93e78fb23d0ec382.setContent(html_8c4f6bf5722f55756d206f75e02e9e9d);
+            
+        
+
+        circle_marker_57fd2c5e1465e844061acd3fe9810a54.bindPopup(popup_3153de61df3ce88c93e78fb23d0ec382)
+        ;
+
+        
+    
+    
+            circle_marker_57fd2c5e1465e844061acd3fe9810a54.bindTooltip(
+                `<div>
+                     Montecarlo: 0.86%
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_a6e12729a532f95afd335efb39afec2b = L.circleMarker(
+                [-27.4222236, -55.3762519],
+                {"bubblingMouseEvents": true, "color": "#2a9d8f", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#2a9d8f", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 1}
+            ).addTo(map_15e8259ee670bab5b59c4ce8a5ddf9fd);
+        
+    
+        var popup_e074206f0608388f4f7d37f268116f16 = L.popup({
+  "maxWidth": 280,
+});
+
+        
+            
+                var html_9b95b0c63ed0e7f45327f2351f008428 = $(`<div id="html_9b95b0c63ed0e7f45327f2351f008428" style="width: 100.0%; height: 100.0%;"><b>Mártires</b><p>Elecciones: 2023 y 2025</p><p>Ausencias acumuladas: 0</p><p>Autoridades consideradas: 35</p><p>Ausentismo registrado: 0.00%</p></div>`)[0];
+                popup_e074206f0608388f4f7d37f268116f16.setContent(html_9b95b0c63ed0e7f45327f2351f008428);
+            
+        
+
+        circle_marker_a6e12729a532f95afd335efb39afec2b.bindPopup(popup_e074206f0608388f4f7d37f268116f16)
+        ;
+
+        
+    
+    
+            circle_marker_a6e12729a532f95afd335efb39afec2b.bindTooltip(
+                `<div>
+                     Mártires: 0.00%
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_0d299f400d9ea2d929846e282b33aa20 = L.circleMarker(
+                [-27.4849798, -55.1202965],
+                {"bubblingMouseEvents": true, "color": "#f4d35e", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#f4d35e", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 1}
+            ).addTo(map_15e8259ee670bab5b59c4ce8a5ddf9fd);
+        
+    
+        var popup_9bfc283c65935dc61c09592c1703b4eb = L.popup({
+  "maxWidth": 280,
+});
+
+        
+            
+                var html_3b7c6c9340ca5e1339b1a4d9525afd29 = $(`<div id="html_3b7c6c9340ca5e1339b1a4d9525afd29" style="width: 100.0%; height: 100.0%;"><b>Oberá</b><p>Elecciones: 2023 y 2025</p><p>Ausencias acumuladas: 55</p><p>Autoridades consideradas: 870</p><p>Ausentismo registrado: 6.32%</p></div>`)[0];
+                popup_9bfc283c65935dc61c09592c1703b4eb.setContent(html_3b7c6c9340ca5e1339b1a4d9525afd29);
+            
+        
+
+        circle_marker_0d299f400d9ea2d929846e282b33aa20.bindPopup(popup_9bfc283c65935dc61c09592c1703b4eb)
+        ;
+
+        
+    
+    
+            circle_marker_0d299f400d9ea2d929846e282b33aa20.bindTooltip(
+                `<div>
+                     Oberá: 6.32%
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_46a8abda2b07ea9d46e2694073c0ff7b = L.circleMarker(
+                [-27.569147, -55.5022242],
+                {"bubblingMouseEvents": true, "color": "#a7c957", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#a7c957", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 1}
+            ).addTo(map_15e8259ee670bab5b59c4ce8a5ddf9fd);
+        
+    
+        var popup_fe248a5d4c3be7d6de985d5e3739ca32 = L.popup({
+  "maxWidth": 280,
+});
+
+        
+            
+                var html_e1ba8b6c0f6bc4b6efdaf57fa393a586 = $(`<div id="html_e1ba8b6c0f6bc4b6efdaf57fa393a586" style="width: 100.0%; height: 100.0%;"><b>Olegario Víctor Andrade</b><p>Elecciones: 2023 y 2025</p><p>Ausencias acumuladas: 1</p><p>Autoridades consideradas: 42</p><p>Ausentismo registrado: 2.38%</p></div>`)[0];
+                popup_fe248a5d4c3be7d6de985d5e3739ca32.setContent(html_e1ba8b6c0f6bc4b6efdaf57fa393a586);
+            
+        
+
+        circle_marker_46a8abda2b07ea9d46e2694073c0ff7b.bindPopup(popup_fe248a5d4c3be7d6de985d5e3739ca32)
+        ;
+
+        
+    
+    
+            circle_marker_46a8abda2b07ea9d46e2694073c0ff7b.bindTooltip(
+                `<div>
+                     Olegario Víctor Andrade: 2.38%
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_55b081b73c846a3d74bc9290b61472aa = L.circleMarker(
+                [-27.7223, -54.9148948],
+                {"bubblingMouseEvents": true, "color": "#2a9d8f", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#2a9d8f", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 1}
+            ).addTo(map_15e8259ee670bab5b59c4ce8a5ddf9fd);
+        
+    
+        var popup_500ae4d8c4ef470feb29bb4d0b058230 = L.popup({
+  "maxWidth": 280,
+});
+
+        
+            
+                var html_8a615d3728033f63e4a5c14e0ddd4a51 = $(`<div id="html_8a615d3728033f63e4a5c14e0ddd4a51" style="width: 100.0%; height: 100.0%;"><b>Panambí</b><p>Elecciones: 2023 y 2025</p><p>Ausencias acumuladas: 0</p><p>Autoridades consideradas: 90</p><p>Ausentismo registrado: 0.00%</p></div>`)[0];
+                popup_500ae4d8c4ef470feb29bb4d0b058230.setContent(html_8a615d3728033f63e4a5c14e0ddd4a51);
+            
+        
+
+        circle_marker_55b081b73c846a3d74bc9290b61472aa.bindPopup(popup_500ae4d8c4ef470feb29bb4d0b058230)
+        ;
+
+        
+    
+    
+            circle_marker_55b081b73c846a3d74bc9290b61472aa.bindTooltip(
+                `<div>
+                     Panambí: 0.00%
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_9f8167c32ba4166c82e110d3695cadf9 = L.circleMarker(
+                [-27.3664824, -55.894295],
+                {"bubblingMouseEvents": true, "color": "#ee964b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#ee964b", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 1}
+            ).addTo(map_15e8259ee670bab5b59c4ce8a5ddf9fd);
+        
+    
+        var popup_855dea5b684f319d9e5934c4249f02e0 = L.popup({
+  "maxWidth": 280,
+});
+
+        
+            
+                var html_9333cfa5d666147c760d61156b197391 = $(`<div id="html_9333cfa5d666147c760d61156b197391" style="width: 100.0%; height: 100.0%;"><b>Posadas</b><p>Elecciones: 2023 y 2025</p><p>Ausencias acumuladas: 334</p><p>Autoridades consideradas: 2926</p><p>Ausentismo registrado: 11.41%</p></div>`)[0];
+                popup_855dea5b684f319d9e5934c4249f02e0.setContent(html_9333cfa5d666147c760d61156b197391);
+            
+        
+
+        circle_marker_9f8167c32ba4166c82e110d3695cadf9.bindPopup(popup_855dea5b684f319d9e5934c4249f02e0)
+        ;
+
+        
+    
+    
+            circle_marker_9f8167c32ba4166c82e110d3695cadf9.bindTooltip(
+                `<div>
+                     Posadas: 11.41%
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_b66e703e387d8f5b2b117a9a6a2f3627 = L.circleMarker(
+                [-26.3465061, -54.1510258],
+                {"bubblingMouseEvents": true, "color": "#2a9d8f", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#2a9d8f", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 1}
+            ).addTo(map_15e8259ee670bab5b59c4ce8a5ddf9fd);
+        
+    
+        var popup_5ca5e62ef28834d1561c76945750e82f = L.popup({
+  "maxWidth": 280,
+});
+
+        
+            
+                var html_59d914c026c7d18f989b940c8d6f5e00 = $(`<div id="html_59d914c026c7d18f989b940c8d6f5e00" style="width: 100.0%; height: 100.0%;"><b>Pozo Azul</b><p>Elecciones: 2023 y 2025</p><p>Ausencias acumuladas: 0</p><p>Autoridades consideradas: 72</p><p>Ausentismo registrado: 0.00%</p></div>`)[0];
+                popup_5ca5e62ef28834d1561c76945750e82f.setContent(html_59d914c026c7d18f989b940c8d6f5e00);
+            
+        
+
+        circle_marker_b66e703e387d8f5b2b117a9a6a2f3627.bindPopup(popup_5ca5e62ef28834d1561c76945750e82f)
+        ;
+
+        
+    
+    
+            circle_marker_b66e703e387d8f5b2b117a9a6a2f3627.bindTooltip(
+                `<div>
+                     Pozo Azul: 0.00%
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_78adfcadfbea9ea91bbb66bfcfbef3d0 = L.circleMarker(
+                [-27.1529165, -54.5600226],
+                {"bubblingMouseEvents": true, "color": "#a7c957", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#a7c957", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 1}
+            ).addTo(map_15e8259ee670bab5b59c4ce8a5ddf9fd);
+        
+    
+        var popup_094310da0ab75f43714da51b0a669a06 = L.popup({
+  "maxWidth": 280,
+});
+
+        
+            
+                var html_fc03c41f4f068abe98d1b51e84b2b644 = $(`<div id="html_fc03c41f4f068abe98d1b51e84b2b644" style="width: 100.0%; height: 100.0%;"><b>Pueblo Illía</b><p>Elecciones: 2023 y 2025</p><p>Ausencias acumuladas: 1</p><p>Autoridades consideradas: 42</p><p>Ausentismo registrado: 2.38%</p></div>`)[0];
+                popup_094310da0ab75f43714da51b0a669a06.setContent(html_fc03c41f4f068abe98d1b51e84b2b644);
+            
+        
+
+        circle_marker_78adfcadfbea9ea91bbb66bfcfbef3d0.bindPopup(popup_094310da0ab75f43714da51b0a669a06)
+        ;
+
+        
+    
+    
+            circle_marker_78adfcadfbea9ea91bbb66bfcfbef3d0.bindTooltip(
+                `<div>
+                     Pueblo Illía: 2.38%
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_7aff106985c6da6bbb29f838dd635e26 = L.circleMarker(
+                [-26.0210433, -54.6108029],
+                {"bubblingMouseEvents": true, "color": "#2a9d8f", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#2a9d8f", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 1}
+            ).addTo(map_15e8259ee670bab5b59c4ce8a5ddf9fd);
+        
+    
+        var popup_5ac20029ce8d3b16879102d8222ce494 = L.popup({
+  "maxWidth": 280,
+});
+
+        
+            
+                var html_bbf9953bbb74e82c3bc97f4033a5ea8d = $(`<div id="html_bbf9953bbb74e82c3bc97f4033a5ea8d" style="width: 100.0%; height: 100.0%;"><b>Puerto Esperanza</b><p>Elecciones: 2023 y 2025</p><p>Ausencias acumuladas: 2</p><p>Autoridades consideradas: 254</p><p>Ausentismo registrado: 0.79%</p></div>`)[0];
+                popup_5ac20029ce8d3b16879102d8222ce494.setContent(html_bbf9953bbb74e82c3bc97f4033a5ea8d);
+            
+        
+
+        circle_marker_7aff106985c6da6bbb29f838dd635e26.bindPopup(popup_5ac20029ce8d3b16879102d8222ce494)
+        ;
+
+        
+    
+    
+            circle_marker_7aff106985c6da6bbb29f838dd635e26.bindTooltip(
+                `<div>
+                     Puerto Esperanza: 0.79%
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_d6bd869368ea223515954418b13a1d89 = L.circleMarker(
+                [-25.6107508, -54.5764199],
+                {"bubblingMouseEvents": true, "color": "#2a9d8f", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#2a9d8f", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 1}
+            ).addTo(map_15e8259ee670bab5b59c4ce8a5ddf9fd);
+        
+    
+        var popup_8f461d322a895e7e6b7756fb1051fb79 = L.popup({
+  "maxWidth": 280,
+});
+
+        
+            
+                var html_94a7f5496e12a68e665972ca8bf4954e = $(`<div id="html_94a7f5496e12a68e665972ca8bf4954e" style="width: 100.0%; height: 100.0%;"><b>Puerto Iguazú</b><p>Elecciones: 2023 y 2025</p><p>Ausencias acumuladas: 8</p><p>Autoridades consideradas: 521</p><p>Ausentismo registrado: 1.54%</p></div>`)[0];
+                popup_8f461d322a895e7e6b7756fb1051fb79.setContent(html_94a7f5496e12a68e665972ca8bf4954e);
+            
+        
+
+        circle_marker_d6bd869368ea223515954418b13a1d89.bindPopup(popup_8f461d322a895e7e6b7756fb1051fb79)
+        ;
+
+        
+    
+    
+            circle_marker_d6bd869368ea223515954418b13a1d89.bindTooltip(
+                `<div>
+                     Puerto Iguazú: 1.54%
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_ac6d6c57bf71d64ab5c9403e3f8eb6e5 = L.circleMarker(
+                [-26.9886138, -55.1658693],
+                {"bubblingMouseEvents": true, "color": "#2a9d8f", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#2a9d8f", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 1}
+            ).addTo(map_15e8259ee670bab5b59c4ce8a5ddf9fd);
+        
+    
+        var popup_bd13bc53d4d3afd4b041792f4f94be79 = L.popup({
+  "maxWidth": 280,
+});
+
+        
+            
+                var html_0678d64e7320a677503cc071b64c4be9 = $(`<div id="html_0678d64e7320a677503cc071b64c4be9" style="width: 100.0%; height: 100.0%;"><b>Puerto Leoni</b><p>Elecciones: 2023 y 2025</p><p>Ausencias acumuladas: 0</p><p>Autoridades consideradas: 54</p><p>Ausentismo registrado: 0.00%</p></div>`)[0];
+                popup_bd13bc53d4d3afd4b041792f4f94be79.setContent(html_0678d64e7320a677503cc071b64c4be9);
+            
+        
+
+        circle_marker_ac6d6c57bf71d64ab5c9403e3f8eb6e5.bindPopup(popup_bd13bc53d4d3afd4b041792f4f94be79)
+        ;
+
+        
+    
+    
+            circle_marker_ac6d6c57bf71d64ab5c9403e3f8eb6e5.bindTooltip(
+                `<div>
+                     Puerto Leoni: 0.00%
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_b84e753c7b8bc28403e6293a71416e06 = L.circleMarker(
+                [-26.4672678, -54.7180771],
+                {"bubblingMouseEvents": true, "color": "#2a9d8f", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#2a9d8f", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 1}
+            ).addTo(map_15e8259ee670bab5b59c4ce8a5ddf9fd);
+        
+    
+        var popup_f0f8105f5d76b2906ab33b1215b27e64 = L.popup({
+  "maxWidth": 280,
+});
+
+        
+            
+                var html_cb8603e68500ffd6c03b8ef57916f47c = $(`<div id="html_cb8603e68500ffd6c03b8ef57916f47c" style="width: 100.0%; height: 100.0%;"><b>Puerto Piray</b><p>Elecciones: 2023 y 2025</p><p>Ausencias acumuladas: 1</p><p>Autoridades consideradas: 134</p><p>Ausentismo registrado: 0.75%</p></div>`)[0];
+                popup_f0f8105f5d76b2906ab33b1215b27e64.setContent(html_cb8603e68500ffd6c03b8ef57916f47c);
+            
+        
+
+        circle_marker_b84e753c7b8bc28403e6293a71416e06.bindPopup(popup_f0f8105f5d76b2906ab33b1215b27e64)
+        ;
+
+        
+    
+    
+            circle_marker_b84e753c7b8bc28403e6293a71416e06.bindTooltip(
+                `<div>
+                     Puerto Piray: 0.75%
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_2f788995b3016e4c93327816ea848c0b = L.circleMarker(
+                [-26.8167893, -55.0266912],
+                {"bubblingMouseEvents": true, "color": "#2a9d8f", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#2a9d8f", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 1}
+            ).addTo(map_15e8259ee670bab5b59c4ce8a5ddf9fd);
+        
+    
+        var popup_6ee26e7214d324a0301d9d046c85ee7f = L.popup({
+  "maxWidth": 280,
+});
+
+        
+            
+                var html_7ef9843c47fff074eebf42d4556de7f5 = $(`<div id="html_7ef9843c47fff074eebf42d4556de7f5" style="width: 100.0%; height: 100.0%;"><b>Puerto Rico</b><p>Elecciones: 2023 y 2025</p><p>Ausencias acumuladas: 1</p><p>Autoridades consideradas: 312</p><p>Ausentismo registrado: 0.32%</p></div>`)[0];
+                popup_6ee26e7214d324a0301d9d046c85ee7f.setContent(html_7ef9843c47fff074eebf42d4556de7f5);
+            
+        
+
+        circle_marker_2f788995b3016e4c93327816ea848c0b.bindPopup(popup_6ee26e7214d324a0301d9d046c85ee7f)
+        ;
+
+        
+    
+    
+            circle_marker_2f788995b3016e4c93327816ea848c0b.bindTooltip(
+                `<div>
+                     Puerto Rico: 0.32%
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_7fdde81818c4977c6ffb5bfc66310769 = L.circleMarker(
+                [-26.9701195, -55.0523056],
+                {"bubblingMouseEvents": true, "color": "#2a9d8f", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#2a9d8f", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 1}
+            ).addTo(map_15e8259ee670bab5b59c4ce8a5ddf9fd);
+        
+    
+        var popup_57f759f0a333c7907662bf4c6c044571 = L.popup({
+  "maxWidth": 280,
+});
+
+        
+            
+                var html_15ef88b2c7eed8fe14d2b534f598b951 = $(`<div id="html_15ef88b2c7eed8fe14d2b534f598b951" style="width: 100.0%; height: 100.0%;"><b>Ruiz de Montoya</b><p>Elecciones: 2023 y 2025</p><p>Ausencias acumuladas: 0</p><p>Autoridades consideradas: 59</p><p>Ausentismo registrado: 0.00%</p></div>`)[0];
+                popup_57f759f0a333c7907662bf4c6c044571.setContent(html_15ef88b2c7eed8fe14d2b534f598b951);
+            
+        
+
+        circle_marker_7fdde81818c4977c6ffb5bfc66310769.bindPopup(popup_57f759f0a333c7907662bf4c6c044571)
+        ;
+
+        
+    
+    
+            circle_marker_7fdde81818c4977c6ffb5bfc66310769.bindTooltip(
+                `<div>
+                     Ruiz de Montoya: 0.00%
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_3261a240f5458ac99f3c00959d6a982b = L.circleMarker(
+                [-27.0858081, -54.8327637],
+                {"bubblingMouseEvents": true, "color": "#2a9d8f", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#2a9d8f", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 1}
+            ).addTo(map_15e8259ee670bab5b59c4ce8a5ddf9fd);
+        
+    
+        var popup_d0ca659d3550cb3435458b0541ddeccb = L.popup({
+  "maxWidth": 280,
+});
+
+        
+            
+                var html_d1970e12527ac8388c929a551c5cc43a = $(`<div id="html_d1970e12527ac8388c929a551c5cc43a" style="width: 100.0%; height: 100.0%;"><b>Salto Encantado</b><p>Elecciones: 2023 y 2025</p><p>Ausencias acumuladas: 0</p><p>Autoridades consideradas: 102</p><p>Ausentismo registrado: 0.00%</p></div>`)[0];
+                popup_d0ca659d3550cb3435458b0541ddeccb.setContent(html_d1970e12527ac8388c929a551c5cc43a);
+            
+        
+
+        circle_marker_3261a240f5458ac99f3c00959d6a982b.bindPopup(popup_d0ca659d3550cb3435458b0541ddeccb)
+        ;
+
+        
+    
+    
+            circle_marker_3261a240f5458ac99f3c00959d6a982b.bindTooltip(
+                `<div>
+                     Salto Encantado: 0.00%
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_06e607d546aa53494eba49a26c462ae4 = L.circleMarker(
+                [-26.0573302, -53.7341764],
+                {"bubblingMouseEvents": true, "color": "#2a9d8f", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#2a9d8f", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 1}
+            ).addTo(map_15e8259ee670bab5b59c4ce8a5ddf9fd);
+        
+    
+        var popup_d15ced100e149cc2193740d3940ac37d = L.popup({
+  "maxWidth": 280,
+});
+
+        
+            
+                var html_ed5eb9774cbc32ddb380e8334fce5d7c = $(`<div id="html_ed5eb9774cbc32ddb380e8334fce5d7c" style="width: 100.0%; height: 100.0%;"><b>San Antonio</b><p>Elecciones: 2023 y 2025</p><p>Ausencias acumuladas: 2</p><p>Autoridades consideradas: 151</p><p>Ausentismo registrado: 1.32%</p></div>`)[0];
+                popup_d15ced100e149cc2193740d3940ac37d.setContent(html_ed5eb9774cbc32ddb380e8334fce5d7c);
+            
+        
+
+        circle_marker_06e607d546aa53494eba49a26c462ae4.bindPopup(popup_d15ced100e149cc2193740d3940ac37d)
+        ;
+
+        
+    
+    
+            circle_marker_06e607d546aa53494eba49a26c462ae4.bindTooltip(
+                `<div>
+                     San Antonio: 1.32%
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_89a289cbb8644003487f188c1c4431a0 = L.circleMarker(
+                [-27.2583992, -55.5392216],
+                {"bubblingMouseEvents": true, "color": "#a7c957", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#a7c957", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 1}
+            ).addTo(map_15e8259ee670bab5b59c4ce8a5ddf9fd);
+        
+    
+        var popup_58914eb0e704bac838f6268f7e17e772 = L.popup({
+  "maxWidth": 280,
+});
+
+        
+            
+                var html_646a81c920028d43ebe2e5091dd4cf37 = $(`<div id="html_646a81c920028d43ebe2e5091dd4cf37" style="width: 100.0%; height: 100.0%;"><b>San Ignacio</b><p>Elecciones: 2023 y 2025</p><p>Ausencias acumuladas: 4</p><p>Autoridades consideradas: 183</p><p>Ausentismo registrado: 2.19%</p></div>`)[0];
+                popup_58914eb0e704bac838f6268f7e17e772.setContent(html_646a81c920028d43ebe2e5091dd4cf37);
+            
+        
+
+        circle_marker_89a289cbb8644003487f188c1c4431a0.bindPopup(popup_58914eb0e704bac838f6268f7e17e772)
+        ;
+
+        
+    
+    
+            circle_marker_89a289cbb8644003487f188c1c4431a0.bindTooltip(
+                `<div>
+                     San Ignacio: 2.19%
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_41458412577b130704953103b07b45a0 = L.circleMarker(
+                [-27.8738956, -55.1347737],
+                {"bubblingMouseEvents": true, "color": "#2a9d8f", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#2a9d8f", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 1}
+            ).addTo(map_15e8259ee670bab5b59c4ce8a5ddf9fd);
+        
+    
+        var popup_3921806f02ad0c62373c05490cad9dde = L.popup({
+  "maxWidth": 280,
+});
+
+        
+            
+                var html_a29ab7707e5cf4e5a9181ea12d19374c = $(`<div id="html_a29ab7707e5cf4e5a9181ea12d19374c" style="width: 100.0%; height: 100.0%;"><b>San Javier</b><p>Elecciones: 2023 y 2025</p><p>Ausencias acumuladas: 1</p><p>Autoridades consideradas: 207</p><p>Ausentismo registrado: 0.48%</p></div>`)[0];
+                popup_3921806f02ad0c62373c05490cad9dde.setContent(html_a29ab7707e5cf4e5a9181ea12d19374c);
+            
+        
+
+        circle_marker_41458412577b130704953103b07b45a0.bindPopup(popup_3921806f02ad0c62373c05490cad9dde)
+        ;
+
+        
+    
+    
+            circle_marker_41458412577b130704953103b07b45a0.bindTooltip(
+                `<div>
+                     San Javier: 0.48%
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_5ac77b072b392c64afafde1f9ada48dd = L.circleMarker(
+                [-27.7700457, -55.7801147],
+                {"bubblingMouseEvents": true, "color": "#2a9d8f", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#2a9d8f", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 1}
+            ).addTo(map_15e8259ee670bab5b59c4ce8a5ddf9fd);
+        
+    
+        var popup_f9982a57092797da6c7debc256cfff51 = L.popup({
+  "maxWidth": 280,
+});
+
+        
+            
+                var html_589b2825e41ab454333ceda7ef80b136 = $(`<div id="html_589b2825e41ab454333ceda7ef80b136" style="width: 100.0%; height: 100.0%;"><b>San José</b><p>Elecciones: 2023 y 2025</p><p>Ausencias acumuladas: 1</p><p>Autoridades consideradas: 108</p><p>Ausentismo registrado: 0.93%</p></div>`)[0];
+                popup_f9982a57092797da6c7debc256cfff51.setContent(html_589b2825e41ab454333ceda7ef80b136);
+            
+        
+
+        circle_marker_5ac77b072b392c64afafde1f9ada48dd.bindPopup(popup_f9982a57092797da6c7debc256cfff51)
+        ;
+
+        
+    
+    
+            circle_marker_5ac77b072b392c64afafde1f9ada48dd.bindTooltip(
+                `<div>
+                     San José: 0.93%
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_c6554abb5e8273a2f8c48034dddc44b8 = L.circleMarker(
+                [-27.4674544, -55.2743019],
+                {"bubblingMouseEvents": true, "color": "#2a9d8f", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#2a9d8f", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 1}
+            ).addTo(map_15e8259ee670bab5b59c4ce8a5ddf9fd);
+        
+    
+        var popup_18d24988865d819f6e49ce541a89ad0c = L.popup({
+  "maxWidth": 280,
+});
+
+        
+            
+                var html_e80c50547ceaee41c040716e84b4361e = $(`<div id="html_e80c50547ceaee41c040716e84b4361e" style="width: 100.0%; height: 100.0%;"><b>San Martín</b><p>Elecciones: 2023 y 2025</p><p>Ausencias acumuladas: 0</p><p>Autoridades consideradas: 36</p><p>Ausentismo registrado: 0.00%</p></div>`)[0];
+                popup_18d24988865d819f6e49ce541a89ad0c.setContent(html_e80c50547ceaee41c040716e84b4361e);
+            
+        
+
+        circle_marker_c6554abb5e8273a2f8c48034dddc44b8.bindPopup(popup_18d24988865d819f6e49ce541a89ad0c)
+        ;
+
+        
+    
+    
+            circle_marker_c6554abb5e8273a2f8c48034dddc44b8.bindTooltip(
+                `<div>
+                     San Martín: 0.00%
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_dd07858ab7aeed3466d03be4cbdb6bb0 = L.circleMarker(
+                [-26.624054, -54.1111534],
+                {"bubblingMouseEvents": true, "color": "#2a9d8f", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#2a9d8f", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 1}
+            ).addTo(map_15e8259ee670bab5b59c4ce8a5ddf9fd);
+        
+    
+        var popup_6f0fca94c4356c9f535692aa5b9e8795 = L.popup({
+  "maxWidth": 280,
+});
+
+        
+            
+                var html_972e49ec5f03c42686321b39635ba488 = $(`<div id="html_972e49ec5f03c42686321b39635ba488" style="width: 100.0%; height: 100.0%;"><b>San Pedro</b><p>Elecciones: 2023 y 2025</p><p>Ausencias acumuladas: 2</p><p>Autoridades consideradas: 290</p><p>Ausentismo registrado: 0.69%</p></div>`)[0];
+                popup_6f0fca94c4356c9f535692aa5b9e8795.setContent(html_972e49ec5f03c42686321b39635ba488);
+            
+        
+
+        circle_marker_dd07858ab7aeed3466d03be4cbdb6bb0.bindPopup(popup_6f0fca94c4356c9f535692aa5b9e8795)
+        ;
+
+        
+    
+    
+            circle_marker_dd07858ab7aeed3466d03be4cbdb6bb0.bindTooltip(
+                `<div>
+                     San Pedro: 0.69%
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_e86ee6660638f22b0d82548b420f4de6 = L.circleMarker(
+                [-26.9932723, -54.4866356],
+                {"bubblingMouseEvents": true, "color": "#a7c957", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#a7c957", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 1}
+            ).addTo(map_15e8259ee670bab5b59c4ce8a5ddf9fd);
+        
+    
+        var popup_2fcb6e1dc6b00619d1aed81dd79f6732 = L.popup({
+  "maxWidth": 280,
+});
+
+        
+            
+                var html_bace9ebd356823199add2a824fb58c0c = $(`<div id="html_bace9ebd356823199add2a824fb58c0c" style="width: 100.0%; height: 100.0%;"><b>San Vicente</b><p>Elecciones: 2023 y 2025</p><p>Ausencias acumuladas: 18</p><p>Autoridades consideradas: 647</p><p>Ausentismo registrado: 2.78%</p></div>`)[0];
+                popup_2fcb6e1dc6b00619d1aed81dd79f6732.setContent(html_bace9ebd356823199add2a824fb58c0c);
+            
+        
+
+        circle_marker_e86ee6660638f22b0d82548b420f4de6.bindPopup(popup_2fcb6e1dc6b00619d1aed81dd79f6732)
+        ;
+
+        
+    
+    
+            circle_marker_e86ee6660638f22b0d82548b420f4de6.bindTooltip(
+                `<div>
+                     San Vicente: 2.78%
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_62e681a6ad27d587914e73beb48376b8 = L.circleMarker(
+                [-27.3692016, -55.5817924],
+                {"bubblingMouseEvents": true, "color": "#2a9d8f", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#2a9d8f", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 1}
+            ).addTo(map_15e8259ee670bab5b59c4ce8a5ddf9fd);
+        
+    
+        var popup_142771a64ac0fada4030428ae4425a7e = L.popup({
+  "maxWidth": 280,
+});
+
+        
+            
+                var html_d3232d0bdd92114d10b814a99fb4bd85 = $(`<div id="html_d3232d0bdd92114d10b814a99fb4bd85" style="width: 100.0%; height: 100.0%;"><b>Santa Ana</b><p>Elecciones: 2023 y 2025</p><p>Ausencias acumuladas: 2</p><p>Autoridades consideradas: 103</p><p>Ausentismo registrado: 1.94%</p></div>`)[0];
+                popup_142771a64ac0fada4030428ae4425a7e.setContent(html_d3232d0bdd92114d10b814a99fb4bd85);
+            
+        
+
+        circle_marker_62e681a6ad27d587914e73beb48376b8.bindPopup(popup_142771a64ac0fada4030428ae4425a7e)
+        ;
+
+        
+    
+    
+            circle_marker_62e681a6ad27d587914e73beb48376b8.bindTooltip(
+                `<div>
+                     Santa Ana: 1.94%
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_55d3ec0f1a91d81104522454a92bbb3d = L.circleMarker(
+                [-27.5085508, -55.8405882],
+                {"bubblingMouseEvents": true, "color": "#2a9d8f", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#2a9d8f", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 1}
+            ).addTo(map_15e8259ee670bab5b59c4ce8a5ddf9fd);
+        
+    
+        var popup_dd797b9200e06ee1a118f8cb07f570e8 = L.popup({
+  "maxWidth": 280,
+});
+
+        
+            
+                var html_e670e7d63bcc61c6e284969b4325e52f = $(`<div id="html_e670e7d63bcc61c6e284969b4325e52f" style="width: 100.0%; height: 100.0%;"><b>Santa Inés</b><p>Elecciones: 2023 y 2025</p><p>Ausencias acumuladas: 0</p><p>Autoridades consideradas: 40</p><p>Ausentismo registrado: 0.00%</p></div>`)[0];
+                popup_dd797b9200e06ee1a118f8cb07f570e8.setContent(html_e670e7d63bcc61c6e284969b4325e52f);
+            
+        
+
+        circle_marker_55d3ec0f1a91d81104522454a92bbb3d.bindPopup(popup_dd797b9200e06ee1a118f8cb07f570e8)
+        ;
+
+        
+    
+    
+            circle_marker_55d3ec0f1a91d81104522454a92bbb3d.bindTooltip(
+                `<div>
+                     Santa Inés: 0.00%
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_41aeb96505c29f8cbb8af42f0ae0caf2 = L.circleMarker(
+                [-27.9345257, -55.4070832],
+                {"bubblingMouseEvents": true, "color": "#2a9d8f", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#2a9d8f", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 1}
+            ).addTo(map_15e8259ee670bab5b59c4ce8a5ddf9fd);
+        
+    
+        var popup_61a456bf60d852fbea843758c646db6c = L.popup({
+  "maxWidth": 280,
+});
+
+        
+            
+                var html_122e98ac89860f8c213b4797c86f88c6 = $(`<div id="html_122e98ac89860f8c213b4797c86f88c6" style="width: 100.0%; height: 100.0%;"><b>Santa María</b><p>Elecciones: 2023 y 2025</p><p>Ausencias acumuladas: 0</p><p>Autoridades consideradas: 24</p><p>Ausentismo registrado: 0.00%</p></div>`)[0];
+                popup_61a456bf60d852fbea843758c646db6c.setContent(html_122e98ac89860f8c213b4797c86f88c6);
+            
+        
+
+        circle_marker_41aeb96505c29f8cbb8af42f0ae0caf2.bindPopup(popup_61a456bf60d852fbea843758c646db6c)
+        ;
+
+        
+    
+    
+            circle_marker_41aeb96505c29f8cbb8af42f0ae0caf2.bindTooltip(
+                `<div>
+                     Santa María: 0.00%
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_6c5d66e45aa7f3cb7e502ba28333345c = L.circleMarker(
+                [-26.3994543, -54.4149449],
+                {"bubblingMouseEvents": true, "color": "#2a9d8f", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#2a9d8f", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 1}
+            ).addTo(map_15e8259ee670bab5b59c4ce8a5ddf9fd);
+        
+    
+        var popup_69c59024c3b1de63296a5d8971e2c831 = L.popup({
+  "maxWidth": 280,
+});
+
+        
+            
+                var html_2a47b0f601a5dd3cdd9fc35eede0c481 = $(`<div id="html_2a47b0f601a5dd3cdd9fc35eede0c481" style="width: 100.0%; height: 100.0%;"><b>Santiago de Liniers</b><p>Elecciones: 2023 y 2025</p><p>Ausencias acumuladas: 0</p><p>Autoridades consideradas: 50</p><p>Ausentismo registrado: 0.00%</p></div>`)[0];
+                popup_69c59024c3b1de63296a5d8971e2c831.setContent(html_2a47b0f601a5dd3cdd9fc35eede0c481);
+            
+        
+
+        circle_marker_6c5d66e45aa7f3cb7e502ba28333345c.bindPopup(popup_69c59024c3b1de63296a5d8971e2c831)
+        ;
+
+        
+    
+    
+            circle_marker_6c5d66e45aa7f3cb7e502ba28333345c.bindTooltip(
+                `<div>
+                     Santiago de Liniers: 0.00%
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_ca7510dcde811ff2d3e74cfc300a602a = L.circleMarker(
+                [-27.1400034, -55.4087254],
+                {"bubblingMouseEvents": true, "color": "#2a9d8f", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#2a9d8f", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 1}
+            ).addTo(map_15e8259ee670bab5b59c4ce8a5ddf9fd);
+        
+    
+        var popup_441abaa7a18a102e7cfa7db7bb633ce4 = L.popup({
+  "maxWidth": 280,
+});
+
+        
+            
+                var html_43b9b879c181127520fc58517873809f = $(`<div id="html_43b9b879c181127520fc58517873809f" style="width: 100.0%; height: 100.0%;"><b>Santo Pipó</b><p>Elecciones: 2023 y 2025</p><p>Ausencias acumuladas: 1</p><p>Autoridades consideradas: 102</p><p>Ausentismo registrado: 0.98%</p></div>`)[0];
+                popup_441abaa7a18a102e7cfa7db7bb633ce4.setContent(html_43b9b879c181127520fc58517873809f);
+            
+        
+
+        circle_marker_ca7510dcde811ff2d3e74cfc300a602a.bindPopup(popup_441abaa7a18a102e7cfa7db7bb633ce4)
+        ;
+
+        
+    
+    
+            circle_marker_ca7510dcde811ff2d3e74cfc300a602a.bindTooltip(
+                `<div>
+                     Santo Pipó: 0.98%
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_0ea763bead5f2328014bac263ddf2cde = L.circleMarker(
+                [-26.4697123, -53.8914762],
+                {"bubblingMouseEvents": true, "color": "#2a9d8f", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#2a9d8f", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 1}
+            ).addTo(map_15e8259ee670bab5b59c4ce8a5ddf9fd);
+        
+    
+        var popup_db3efe3116d2119ea7e595d9dd7f2bd4 = L.popup({
+  "maxWidth": 280,
+});
+
+        
+            
+                var html_b77a5c20119f89c1e0b0043e7866bab6 = $(`<div id="html_b77a5c20119f89c1e0b0043e7866bab6" style="width: 100.0%; height: 100.0%;"><b>Tobuna</b><p>Elecciones: 2023 y 2025</p><p>Ausencias acumuladas: 0</p><p>Autoridades consideradas: 24</p><p>Ausentismo registrado: 0.00%</p></div>`)[0];
+                popup_db3efe3116d2119ea7e595d9dd7f2bd4.setContent(html_b77a5c20119f89c1e0b0043e7866bab6);
+            
+        
+
+        circle_marker_0ea763bead5f2328014bac263ddf2cde.bindPopup(popup_db3efe3116d2119ea7e595d9dd7f2bd4)
+        ;
+
+        
+    
+    
+            circle_marker_0ea763bead5f2328014bac263ddf2cde.bindTooltip(
+                `<div>
+                     Tobuna: 0.00%
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_13a79e54199846c11998d74ccec0ea2e = L.circleMarker(
+                [-28.0041158, -55.6095253],
+                {"bubblingMouseEvents": true, "color": "#2a9d8f", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#2a9d8f", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 1}
+            ).addTo(map_15e8259ee670bab5b59c4ce8a5ddf9fd);
+        
+    
+        var popup_5012af01867dc35e960850e0ea8faf10 = L.popup({
+  "maxWidth": 280,
+});
+
+        
+            
+                var html_065558d281af7cc2b466cc08355779d1 = $(`<div id="html_065558d281af7cc2b466cc08355779d1" style="width: 100.0%; height: 100.0%;"><b>Tres Capones</b><p>Elecciones: 2023 y 2025</p><p>Ausencias acumuladas: 0</p><p>Autoridades consideradas: 24</p><p>Ausentismo registrado: 0.00%</p></div>`)[0];
+                popup_5012af01867dc35e960850e0ea8faf10.setContent(html_065558d281af7cc2b466cc08355779d1);
+            
+        
+
+        circle_marker_13a79e54199846c11998d74ccec0ea2e.bindPopup(popup_5012af01867dc35e960850e0ea8faf10)
+        ;
+
+        
+    
+    
+            circle_marker_13a79e54199846c11998d74ccec0ea2e.bindTooltip(
+                `<div>
+                     Tres Capones: 0.00%
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_e3e71f43db0998a0815579ba78a22965 = L.circleMarker(
+                [-27.428038, -55.8793355],
+                {"bubblingMouseEvents": true, "color": "#ee964b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#ee964b", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 1}
+            ).addTo(map_15e8259ee670bab5b59c4ce8a5ddf9fd);
+        
+    
+        var popup_f7ec70db0a57eab4a9170ae52abdf284 = L.popup({
+  "maxWidth": 280,
+});
+
+        
+            
+                var html_f06cab022ff6c087eddbca627473de8b = $(`<div id="html_f06cab022ff6c087eddbca627473de8b" style="width: 100.0%; height: 100.0%;"><b>Villa Lanús</b><p>Elecciones: 2023 y 2025</p><p>Ausencias acumuladas: 17</p><p>Autoridades consideradas: 160</p><p>Ausentismo registrado: 10.62%</p></div>`)[0];
+                popup_f7ec70db0a57eab4a9170ae52abdf284.setContent(html_f06cab022ff6c087eddbca627473de8b);
+            
+        
+
+        circle_marker_e3e71f43db0998a0815579ba78a22965.bindPopup(popup_f7ec70db0a57eab4a9170ae52abdf284)
+        ;
+
+        
+    
+    
+            circle_marker_e3e71f43db0998a0815579ba78a22965.bindTooltip(
+                `<div>
+                     Villa Lanús: 10.62%
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_fe5b09d354d6a26f32ec8bded1626533 = L.circleMarker(
+                [-27.4437966, -55.8612378],
+                {"bubblingMouseEvents": true, "color": "#d62828", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#d62828", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 1}
+            ).addTo(map_15e8259ee670bab5b59c4ce8a5ddf9fd);
+        
+    
+        var popup_88ab45f9d0cf699d856665d9acc7ba49 = L.popup({
+  "maxWidth": 280,
+});
+
+        
+            
+                var html_7aabcdeb7adcaa43a64d4f93c4d5b1f7 = $(`<div id="html_7aabcdeb7adcaa43a64d4f93c4d5b1f7" style="width: 100.0%; height: 100.0%;"><b>Ñu Porá</b><p>Elecciones: 2023 y 2025</p><p>Ausencias acumuladas: 76</p><p>Autoridades consideradas: 483</p><p>Ausentismo registrado: 15.73%</p></div>`)[0];
+                popup_88ab45f9d0cf699d856665d9acc7ba49.setContent(html_7aabcdeb7adcaa43a64d4f93c4d5b1f7);
+            
+        
+
+        circle_marker_fe5b09d354d6a26f32ec8bded1626533.bindPopup(popup_88ab45f9d0cf699d856665d9acc7ba49)
+        ;
+
+        
+    
+    
+            circle_marker_fe5b09d354d6a26f32ec8bded1626533.bindTooltip(
+                `<div>
+                     Ñu Porá: 15.73%
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+</script>
+</html>
